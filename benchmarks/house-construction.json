@@ -1,0 +1,91 @@
+{
+  "scope": "Local Blender Lab TCP bridge. Model reasoning, MCP client overhead, validation, staging and rendering excluded. Identical data API builder in all runs.",
+  "objects": 973,
+  "runs": [
+    {
+      "strategy": "original, individual calls",
+      "profile": {
+        "timer_interval_active": 0.25,
+        "timer_interval_idle": 1.0,
+        "timer_interval_idle_delay": 5.0
+      },
+      "batch_size": 1,
+      "build_calls": 973,
+      "setup_seconds": 0.30105270887725055,
+      "build_seconds": 246.06770825013518,
+      "fingerprint": {
+        "sha256": "580930f5f666efead53377d994686e1ddddc4c46d45ac256fbc71abfbe6d6b52",
+        "objects": 973,
+        "vertices": 34174,
+        "faces": 36967,
+        "bounds_min": [
+          -6.599999904632568,
+          -6.100724220275879,
+          -0.4599999785423279
+        ],
+        "bounds_max": [
+          6.599999904632568,
+          6.099999904632568,
+          7.579999923706055
+        ]
+      }
+    },
+    {
+      "strategy": "faster polling, individual calls",
+      "profile": {
+        "timer_interval_active": 0.05,
+        "timer_interval_idle": 0.25,
+        "timer_interval_idle_delay": 5.0
+      },
+      "batch_size": 1,
+      "build_calls": 973,
+      "setup_seconds": 0.07251566601917148,
+      "build_seconds": 57.846691749989986,
+      "fingerprint": {
+        "sha256": "580930f5f666efead53377d994686e1ddddc4c46d45ac256fbc71abfbe6d6b52",
+        "objects": 973,
+        "vertices": 34174,
+        "faces": 36967,
+        "bounds_min": [
+          -6.599999904632568,
+          -6.100724220275879,
+          -0.4599999785423279
+        ],
+        "bounds_max": [
+          6.599999904632568,
+          6.099999904632568,
+          7.579999923706055
+        ]
+      }
+    },
+    {
+      "strategy": "faster polling, batches of 64",
+      "profile": {
+        "timer_interval_active": 0.05,
+        "timer_interval_idle": 0.25,
+        "timer_interval_idle_delay": 5.0
+      },
+      "batch_size": 64,
+      "build_calls": 16,
+      "setup_seconds": 0.060149208875373006,
+      "build_seconds": 0.9252325829584152,
+      "fingerprint": {
+        "sha256": "580930f5f666efead53377d994686e1ddddc4c46d45ac256fbc71abfbe6d6b52",
+        "objects": 973,
+        "vertices": 34174,
+        "faces": 36967,
+        "bounds_min": [
+          -6.599999904632568,
+          -6.100724220275879,
+          -0.4599999785423279
+        ],
+        "bounds_max": [
+          6.599999904632568,
+          6.099999904632568,
+          7.579999923706055
+        ]
+      }
+    }
+  ],
+  "geometry_materials_match": true
+}

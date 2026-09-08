@@ -1,0 +1,65 @@
+{
+  "device": "METAL",
+  "devices": [
+    "Apple M2 Max (GPU - 30 cores)"
+  ],
+  "blender_version": "5.2.0 LTS",
+  "samples": 64,
+  "scope": "Same scene and sample count, GPU denoising, persistent data. Three warm repeated renders per configuration; one excluded full-sample warmup per configuration. No Blender or user preference files saved.",
+  "settings": {
+    "resolution": [
+      1400,
+      1400
+    ],
+    "resolution_percentage": 100,
+    "adaptive_sampling": true,
+    "noise_threshold": 0.009999999776482582,
+    "min_samples": 0,
+    "seed": 7421
+  },
+  "profiles": [
+    {
+      "name": "gpu-auto",
+      "metalrt": "AUTO",
+      "enabled_devices": [
+        "Apple M2 Max (GPU - 30 cores)"
+      ],
+      "seconds": [
+        3.962145207915455,
+        3.8797925407998264,
+        3.825927583966404
+      ],
+      "warmup_seconds": 5.28574716579169,
+      "median_seconds": 3.8797925407998264
+    },
+    {
+      "name": "cpu-plus-gpu",
+      "metalrt": "AUTO",
+      "enabled_devices": [
+        "Apple M2 Max",
+        "Apple M2 Max (GPU - 30 cores)"
+      ],
+      "seconds": [
+        6.846008207881823,
+        7.111056874971837,
+        10.881276333006099
+      ],
+      "warmup_seconds": 10.285303709097207,
+      "median_seconds": 7.111056874971837
+    },
+    {
+      "name": "gpu-metalrt",
+      "metalrt": "ON",
+      "enabled_devices": [
+        "Apple M2 Max (GPU - 30 cores)"
+      ],
+      "seconds": [
+        4.304710457799956,
+        4.24271525000222,
+        4.250874750083312
+      ],
+      "warmup_seconds": 101.69995187502354,
+      "median_seconds": 4.250874750083312
+    }
+  ]
+}

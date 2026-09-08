@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+work/
+outputs/
+*.blend1
+*.blend2
+*.log
+.env
+.env.*

@@ -1,0 +1,58 @@
+{
+  "blender_version": "5.2.0 LTS",
+  "device": "METAL",
+  "devices": [
+    "Apple M2 Max (GPU - 30 cores)"
+  ],
+  "samples": 64,
+  "scope": "Warm repeat renders of an unchanged scene in one background process. Each profile gets an excluded warmup. Render call includes preparation, denoising and PNG write. Device/process startup excluded.",
+  "settings": {
+    "resolution": [
+      1400,
+      1400
+    ],
+    "resolution_percentage": 100,
+    "adaptive_sampling": true,
+    "noise_threshold": 0.009999999776482582,
+    "min_samples": 0,
+    "seed": 7421
+  },
+  "profiles": [
+    {
+      "name": "cpu-denoise",
+      "gpu_denoising_requested": false,
+      "persistent_data": false,
+      "warmup_seconds": 9.772693790961057,
+      "seconds": [
+        9.168305290862918,
+        9.855272167129442,
+        8.822783542098477
+      ],
+      "median_seconds": 9.168305290862918
+    },
+    {
+      "name": "gpu-denoise",
+      "gpu_denoising_requested": true,
+      "persistent_data": false,
+      "warmup_seconds": 8.805536375148222,
+      "seconds": [
+        6.515687000006437,
+        6.218268707860261,
+        5.909144749864936
+      ],
+      "median_seconds": 6.218268707860261
+    },
+    {
+      "name": "gpu-denoise-cached",
+      "gpu_denoising_requested": true,
+      "persistent_data": true,
+      "warmup_seconds": 6.414300040807575,
+      "seconds": [
+        4.059292208170518,
+        4.108966167084873,
+        5.078504832927138
+      ],
+      "median_seconds": 4.108966167084873
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "blender_version": "5.2.0 LTS",
+  "device": "METAL",
+  "devices": [
+    "Apple M2 Max (GPU - 30 cores)"
+  ],
+  "device_setup_seconds": 0.00266700005158782,
+  "scope": "Render calls in one Blender process after an excluded warmup; includes scene preparation, denoising and PNG writing. Process startup and device selection excluded.",
+  "settings": {
+    "resolution": [
+      1400,
+      1400
+    ],
+    "resolution_percentage": 100,
+    "denoising": true,
+    "adaptive_sampling": true,
+    "noise_threshold": 0.009999999776482582,
+    "min_samples": 0,
+    "persistent_data": false,
+    "seed": 7421,
+    "view_transform": "AgX"
+  },
+  "runs": [
+    {
+      "repeat": 1,
+      "samples": 64,
+      "seconds": 8.143273917026818
+    },
+    {
+      "repeat": 1,
+      "samples": 32,
+      "seconds": 5.945928332861513
+    },
+    {
+      "repeat": 2,
+      "samples": 32,
+      "seconds": 6.331145375035703
+    },
+    {
+      "repeat": 2,
+      "samples": 64,
+      "seconds": 8.218689666129649
+    },
+    {
+      "repeat": 3,
+      "samples": 64,
+      "seconds": 7.572850000113249
+    },
+    {
+      "repeat": 3,
+      "samples": 32,
+      "seconds": 6.577095875050873
+    }
+  ],
+  "warmup_seconds": 6.180075875017792,
+  "medians_seconds": {
+    "64": 8.143273917026818,
+    "32": 6.331145375035703
+  },
+  "image_comparison": {
+    "space": "Normalized RGB values from Blender PNG loader, peak 1",
+    "mean_absolute_error": 0.0012835427187383175,
+    "p99_absolute_error": 0.0156862773001194,
+    "psnr_db_peak_1": 48.05335285006844,
+    "interpretation": "Difference from the higher-sample result, not a ground-truth quality score. Inspect both images visually."
+  }
+}
