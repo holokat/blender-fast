@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "scope": "Live local bridge build plus isolated render process for each lane. Lanes run sequentially. Three warm repeats follow the first render in each process. Timers exclude model authoring and preview preflight. Total includes profile setup, validation, saving, process startup, rendering and instrumentation. Rendering holds geometry, camera, lights, 64 sample limit and 1400x1000 resolution fixed. No AI or external MCP server/client is timed.",
+  "status": "complete",
+  "results": [
+    {
+      "lane": "baseline",
+      "batch_size": 1,
+      "calls": 228,
+      "polling": {
+        "timer_interval_active": 0.25,
+        "timer_interval_idle": 1.0,
+        "timer_interval_idle_delay": 5.0
+      },
+      "setup_seconds": 0.2901915421243757,
+      "build_seconds": 57.60659504192881,
+      "bridge_round_trip_seconds": 57.56989051448181,
+      "fingerprint": {
+        "sha256": "60135e703439183ccbbbe06ec8e67c6977fc7b4213ebb0b0e5aa2d1ac1b32c2a",
+        "objects": 228,
+        "vertices": 4496,
+        "faces": 3272
+      },
+      "render_process_seconds": 17.438551208935678,
+      "total_seconds": 76.39727449999191,
+      "settings": {
+        "device": "METAL",
+        "devices": [
+          "Apple M2 Max (GPU - 30 cores)"
+        ],
+        "samples": 64,
+        "resolution": [
+          1400,
+          1000
+        ],
+        "gpu_denoising": false,
+        "persistent_data": false,
+        "metalrt": "AUTO",
+        "noise_threshold": 0.009999999776482582,
+        "seed": 7421,
+        "blender_version": "5.2.0 LTS"
+      },
+      "renders": [
+        {
+          "phase": "first_render",
+          "seconds": 4.470750374952331,
+          "image": "baseline-first_render.png"
+        },
+        {
+          "phase": "repeat_1",
+          "seconds": 3.959849583916366,
+          "image": "baseline-repeat_1.png"
+        },
+        {
+          "phase": "repeat_2",
+          "seconds": 3.930769084021449,
+          "image": "baseline-repeat_2.png"
+        },
+        {
+          "phase": "repeat_3",
+          "seconds": 4.224653624929488,
+          "image": "baseline-repeat_3.png"
+        }
+      ],
+      "warm_median_seconds": 3.959849583916366
+    },
+    {
+      "lane": "optimized",
+      "batch_size": 64,
+      "calls": 4,
+      "polling": {
+        "timer_interval_active": 0.05,
+        "timer_interval_idle": 0.25,
+        "timer_interval_idle_delay": 5.0
+      },
+      "setup_seconds": 0.06869470793753862,
+      "build_seconds": 0.21803670818917453,
+      "bridge_round_trip_seconds": 0.21764820767566562,
+      "fingerprint": {
+        "sha256": "60135e703439183ccbbbe06ec8e67c6977fc7b4213ebb0b0e5aa2d1ac1b32c2a",
+        "objects": 228,
+        "vertices": 4496,
+        "faces": 3272
+      },
+      "render_process_seconds": 9.0873011671938,
+      "total_seconds": 9.707684583030641,
+      "settings": {
+        "device": "METAL",
+        "devices": [
+          "Apple M2 Max (GPU - 30 cores)"
+        ],
+        "samples": 64,
+        "resolution": [
+          1400,
+          1000
+        ],
+        "gpu_denoising": true,
+        "persistent_data": true,
+        "metalrt": "AUTO",
+        "noise_threshold": 0.009999999776482582,
+        "seed": 7421,
+        "blender_version": "5.2.0 LTS"
+      },
+      "renders": [
+        {
+          "phase": "first_render",
+          "seconds": 2.537278624949977,
+          "image": "optimized-first_render.png"
+        },
+        {
+          "phase": "repeat_1",
+          "seconds": 2.0295036248862743,
+          "image": "optimized-repeat_1.png"
+        },
+        {
+          "phase": "repeat_2",
+          "seconds": 1.7871709170285612,
+          "image": "optimized-repeat_2.png"
+        },
+        {
+          "phase": "repeat_3",
+          "seconds": 1.792218041839078,
+          "image": "optimized-repeat_3.png"
+        }
+      ],
+      "warm_median_seconds": 1.792218041839078
+    }
+  ],
+  "fingerprints_match": true,
+  "order": [
+    "baseline",
+    "optimized"
+  ],
+  "system_load_controlled": false,
+  "polling_restored": true
+}

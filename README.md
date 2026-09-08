@@ -30,6 +30,14 @@ A further fixed-quality device comparison found GPU-only MetalRT Auto at 3.880 s
 
 Measured on 9 September 2026 with Blender 5.2.0 LTS, Blender Lab MCP add-on 1.0.0, and an Apple M2 Max with a 30-core GPU. See [construction methodology](skills/blender-fast/references/benchmark.md), [rendering guidance](skills/blender-fast/references/rendering.md), and [raw measurements](benchmarks).
 
+## Combined pipeline with a live preview
+
+The selected strategy combines batched direct-data scene edits, faster supported bridge polling, GPU path tracing, GPU denoising and persistent data. On the tested M2 Max, keep Metal GPU only and MetalRT Auto. Preserve samples, resolution and the visual result; verify device support on another machine.
+
+The new 228-object jet comparison measured **76.40 s versus 9.71 s** for one build plus four renders, about **7.87× faster**. Construction took 57.61 s versus 0.22 s; the warm render median was 3.96 s versus 1.79 s. These are different stages, and their ratios must not be multiplied.
+
+The [live comparison guide](docs/live-comparison.md) includes the chosen settings, raw evidence and commands to launch the local side-by-side monitor. Watch acknowledged geometry creation, live timers and completed render images, then replay both measured runs from the same starting point. Measurement runs execute sequentially on one GPU to avoid contention. The recorded replay is labeled explicitly.
+
 ## Install the skill
 
 The installer and bridge helpers require an existing Python 3.10+ installation and use the standard library. The render helpers run inside Blender and use its bundled `bpy` and NumPy.

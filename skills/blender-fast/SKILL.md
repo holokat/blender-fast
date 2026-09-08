@@ -39,7 +39,7 @@ Run compact checks at the end of each meaningful stage: expected objects, valid 
 
 Render or inspect the viewport at meaningful milestones and before claiming visual completion. Examine silhouette, proportions, intersections, materials, lighting and framing. A matching hash or successful script does not establish visual quality. Preserve the requested detail rather than reducing it to make a benchmark look faster.
 
-For render optimization, read [references/rendering.md](references/rendering.md). Inspect the actual GPU backend, the scene device and the denoiser device separately. Measure persistent-data caching for repeated renders, preserving sample count and resolution before trying quality tradeoffs.
+For render optimization, read [references/rendering.md](references/rendering.md). Inspect the actual GPU backend, the scene device and the denoiser device separately. Measure persistent-data caching for repeated renders, preserving sample count and resolution before trying quality tradeoffs. Combine the measured construction and render settings in the working pipeline, but report their timings separately and measure the combined total directly.
 
 Use preview render settings during iteration and restore or explicitly record final settings. Save the editable `.blend` plus the requested final exports. Before publishing previews, inspect image metadata: Blender can embed an absolute `.blend` path even when visible stamping is disabled. Disable filename metadata at render time when the path should not be shared. Keep temporary previews and logs in the task's work directory.
 

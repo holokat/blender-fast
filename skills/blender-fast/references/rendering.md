@@ -2,6 +2,14 @@
 
 Bridge latency, geometry construction and image rendering are separate timing stages. Batching Python commands does not by itself make Cycles trace rays faster.
 
+## Selected profile
+
+For the verified M2 Max workflow, use Metal GPU only, MetalRT Auto, GPU OpenImageDenoise and persistent data for repeated rendering. Combine this with the skill's batched direct-data edits and supported faster polling. Keep the requested sample limit, resolution, camera, lights and essential geometry unchanged. Inspect the selected backend, actual enabled devices, scene device and denoiser separately. For other hardware, detect support and benchmark an equivalent profile rather than copying Metal settings.
+
+The combined jet experiment measured one build plus four renders at 76.40 s versus 9.71 s. Its warm render median improved from 3.96 s to 1.79 s; the much larger construction ratio applies only to bridge object creation. [Combined benchmark and live preview](https://github.com/holokat/blender-fast/blob/main/docs/live-comparison.md). Do not multiply construction and render speedups. A job's total improvement depends on its actual stage durations and number of renders.
+
+For a live comparison on one GPU, measure lanes sequentially and keep live monitoring separate from synchronized replay. Drive preview geometry from acknowledged build events, expose images only after their render completes, and distinguish first-in-process renders from warm repeats. Avoid presenting a recorded replay as simultaneous execution.
+
 ## Preserve quality while avoiding repeated work
 
 For Cycles, inspect both the selected compute backend and the scene's `cycles.device`. An installed GPU is not evidence that the scene uses it. Select an available backend appropriate to the machine, enable its actual devices, and confirm the completed render's device. The house initially saved CPU as its scene device even though its separate render script selected Metal; this is why the saved scene and the render invocation both matter.
