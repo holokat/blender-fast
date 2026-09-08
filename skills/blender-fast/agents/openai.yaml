@@ -1,6 +1,6 @@
 interface:
   display_name: "Blender fast"
-  short_description: "Batch Blender work and verify the visual result"
-  default_prompt: "Use $blender-fast to build or edit this Blender scene with batched operations and visual verification."
+  short_description: "Optimize Blender builds and renders with measured settings"
+  default_prompt: "Use $blender-fast to build and render this scene with the measured combined workflow, preserving the requested quality and verifying the result."
 policy:
   allow_implicit_invocation: true

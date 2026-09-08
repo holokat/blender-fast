@@ -38,6 +38,10 @@ The new 228-object jet comparison measured **76.40 s versus 9.71 s** for one bui
 
 The [live comparison guide](docs/live-comparison.md) includes the chosen settings, raw evidence and commands to launch the local side-by-side monitor. Watch acknowledged geometry creation, live timers and completed render images, then replay both measured runs from the same starting point. Measurement runs execute sequentially on one GPU to avoid contention. The recorded replay is labeled explicitly.
 
+## Implement with an LLM agent
+
+Start with the [agent implementation guide](skills/blender-fast/references/agent-workflow.md). It includes the chosen path, a tested Blender Python recipe, batching and process-lifetime guidance, device verification and failure recovery. Codex uses the packaged skill; other LLM agents can read the same Markdown and adapt execution to their existing Blender tool. [AGENTS.md](AGENTS.md) routes agents working in this repository to that guide.
+
 ## Install the skill
 
 The installer and bridge helpers require an existing Python 3.10+ installation and use the standard library. The render helpers run inside Blender and use its bundled `bpy` and NumPy.
@@ -53,7 +57,7 @@ The skill installs into `$CODEX_HOME/skills/blender-fast`, or `~/.codex/skills/b
 Invoke it explicitly with `$blender-fast`. To require it for all future Blender work, add this routing instruction to your Codex `AGENTS.md`, adjusting the path if needed:
 
 ```text
-Before Blender modeling, scene editing, materials, animation, automation, MCP, bpy scripting or rendering work, load and apply ~/.codex/skills/blender-fast/SKILL.md. Preserve the requested scene and bridge, batch related operations, and measure construction and rendering separately.
+Before Blender modeling, scene editing, materials, animation, automation, MCP, bpy scripting or rendering work, load and apply ~/.codex/skills/blender-fast/SKILL.md. Use its default combined path and references/agent-workflow.md. Preserve the requested renderer, scene, bridge and quality settings, verify the hardware profile, and measure construction and rendering separately.
 ```
 
 ## Use the existing Blender Lab bridge

@@ -7,6 +7,12 @@ description: Build, edit, inspect, automate and render Blender scenes using batc
 
 Use this workflow for Blender work. Preserve the user's scene, chosen tools and visual requirements. Speed is useful when the result remains correct and reviewable.
 
+## Default combined path
+
+Start with batched direct-data edits and shared mesh/material data where suitable. For the verified Blender Lab bridge, use supported fast polling while preserving already-faster settings. For Cycles on the tested M2 Max, use Metal GPU only, MetalRT Auto, GPU OpenImageDenoise and persistent data for repeated renders in the same process. Preserve the task's renderer and quality requirements; inspect and measure the equivalent configuration on other hardware.
+
+Read [references/agent-workflow.md](references/agent-workflow.md) when implementing this path in a new task or agent integration. It contains the concrete render recipe, persistence boundaries, verification steps and links to working examples. Treat the measured profile as the starting choice rather than enabling every possible device or optimization.
+
 ## Establish the connection
 
 Identify the installed Blender version, bridge implementation and active scene before changing anything. Prefer an existing compatible Blender MCP tool. The bundled helper is specifically for the Blender Lab null-delimited local TCP bridge, verified with add-on 1.0.0 and Blender 5.2.0 LTS. It is not a client for the separate ahujasid/blender-mcp protocol.
