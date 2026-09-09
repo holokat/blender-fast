@@ -9,6 +9,10 @@ Use this workflow for Blender work. Preserve the user's scene, chosen tools and 
 
 ## Default combined path
 
+First inspect [shape programs](references/shape-programs.md) for reusable construction patterns, or [scene recipes](references/scene-recipes.md) for finished procedural assemblies that fit the brief. Compose data and reuse shared geometry before writing new factories. Apply revisions by stable assembly ID and skip unchanged data. Use batched Python for unsupported shapes while preserving the requested design.
+
+For early feedback, render Eevee 4 at 800 × 550, then Cycles 8 and Cycles 64 at 1600 × 1100 when those profiles suit the task. Keep the same Blender process alive through refinement. These are explicit quality tradeoffs; use the user's required renderer, resolution and acceptable final quality. Reuse an existing preview server and label saved image switching separately from live rerendering.
+
 Start with batched direct-data edits and shared mesh/material data where suitable. For the verified Blender Lab bridge, use supported fast polling while preserving already-faster settings. For Cycles on the tested M2 Max, use Metal GPU only, MetalRT Auto, GPU OpenImageDenoise and persistent data for repeated renders in the same process. Preserve the task's renderer and quality requirements; inspect and measure the equivalent configuration on other hardware.
 
 Read [references/agent-workflow.md](references/agent-workflow.md) when implementing this path in a new task or agent integration. It contains the concrete render recipe, persistence boundaries, verification steps and links to working examples. Treat the measured profile as the starting choice rather than enabling every possible device or optimization.

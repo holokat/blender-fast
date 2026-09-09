@@ -40,6 +40,10 @@ The [live comparison guide](docs/live-comparison.md) includes the chosen setting
 
 ## Implement with an LLM agent
 
+For new scenes, use the [current fast workflow](docs/fast-workflow.md): compose reusable shape definitions or scene recipes, update assemblies by stable ID, and keep Blender resident for **Eevee preview → Cycles 8 → Cycles 64** refinement. It uses the existing procedural builder and needs no custom generative model. The packaged and installed skill route agents to this path when it fits the brief.
+
+Three fresh conservatory builds in a warmed process reached Eevee feedback in a median **0.517 s**, and all three renders plus editable save in **6.750 s**, starting from a prepared program. Agent authoring and visual review are additional work. The report also compares full scene revisions, explains lighting differences between browser views and Blender, and shows how to reuse the existing preview server.
+
 Start with the [agent implementation guide](skills/blender-fast/references/agent-workflow.md). It includes the chosen path, a tested Blender Python recipe, batching and process-lifetime guidance, device verification and failure recovery. Codex uses the packaged skill; other LLM agents can read the same Markdown and adapt execution to their existing Blender tool. [AGENTS.md](AGENTS.md) routes agents working in this repository to that guide.
 
 ## Install the skill

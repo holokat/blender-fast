@@ -22,6 +22,8 @@ Reuse mesh and material data where the asset allows it. Use appropriate geometry
 
 ## Quality and workflow tradeoffs
 
+The [scene recipe profiles](scene-recipes.md) provide a progressive default: Eevee 4 at 800 × 550 for initial feedback, then Cycles 8 and Cycles 64 at 1600 × 1100 in the same process. These named profiles (`interactive`, `optNEW`, `opt1`) trade image quality for latency. They do not replace the user's required renderer, samples or resolution. Reuse the preview server and distinguish saved-image selection from a newly rendered revision. See [the measured workflow](https://github.com/holokat/blender-fast/blob/main/docs/fast-workflow.md).
+
 Adaptive sampling stops work in pixels that have converged. Noise thresholds, minimum samples and maximum samples jointly affect the result. Denoising may make a lower sample limit acceptable; inspect fine details, contact shadows and any animation for flicker. Do not treat a lower sample count as a quality-preserving change without checking it.
 
 Eevee can suit fast previews and stylized final images when its lighting and effects meet the brief. It is an engine choice with a different rendering approach. Keep the user's requested renderer and approve the actual visual result before treating it as a replacement.

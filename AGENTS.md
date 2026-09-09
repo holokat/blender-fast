@@ -2,6 +2,8 @@
 
 For Blender modeling, automation or rendering work in this repository, read [the skill](skills/blender-fast/SKILL.md) and [the implementation guide](skills/blender-fast/references/agent-workflow.md). Use the combined workflow as the starting path while preserving the task's renderer, scene and quality requirements. The Metal GPU-only profile is the measured choice for the M2 Max; inspect support on another machine.
 
+For new scenes, inspect the reusable shape definitions and scene recipes before writing new factories. Prefer stable assembly IDs, shared geometry, unchanged-data checks and a resident worker. Use progressive Eevee, Cycles 8 and Cycles 64 feedback when suitable, then inspect and save at the requested final quality. Reuse an existing preview server. [Current workflow and measured limits](docs/fast-workflow.md).
+
 Keep geometry creation, bridge latency and rendering timings separate. Publish speed claims only with their scene, hardware, quality settings, timing scope and raw evidence. Do not multiply stage speedups or present recorded playback as simultaneous execution.
 
 Reuse the existing protocol client and isolated examples. Never clear an unrelated scene, save global preferences incidentally, or retry an uncertain mutation automatically. Read the scoped rollback guidance in the skill.
