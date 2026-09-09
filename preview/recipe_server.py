@@ -133,6 +133,10 @@ def main():
                         with controller.condition:
                             controller.condition.wait_for(lambda: controller.state['revision'] != revision, timeout=15)
                             state = dict(controller.state)
+                        if state['revision'] == revision:
+                            self.wfile.write(b': keepalive\n\n')
+                            self.wfile.flush()
+                            continue
                         revision = state['revision']
                         self.wfile.write(('data: ' + json.dumps(state) + '\n\n').encode())
                         self.wfile.flush()

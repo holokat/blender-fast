@@ -1,6 +1,6 @@
 const $ = (id) => document.getElementById(id);
 const base = await fetch('/recipe.json').then((r) => r.json());
-let yaw = 0, elevation = 0, jobId, latestSequence = 0, submittedAt = 0, drag, timer;
+let yaw = 0, elevation = 0, jobId, completedJobId, latestSequence = 0, submittedAt = 0, drag, timer;
 const selected = new Set(['orrery','reactor','telescope','desk','treasury','throne','alchemy','hoist','ritual']);
 
 function recipe() {
@@ -18,6 +18,7 @@ function recipe() {
 
 async function submit(save=false, interactionStarted=performance.now()) {
   const sequence = ++latestSequence;
+  jobId = null;
   const started = interactionStarted;
   $('updating').hidden = false;
   $('state').textContent = 'Queued';
@@ -33,7 +34,7 @@ async function submit(save=false, interactionStarted=performance.now()) {
 const events = new EventSource('/api/events');
 events.onmessage = async ({data}) => {
   const result = JSON.parse(data);
-  if (result.id !== jobId) return;
+  if (!result.id || result.id !== jobId || result.id === completedJobId) return;
   if (result.status === 'error') { $('state').textContent = result.message; $('updating').hidden = true; return; }
   if (result.status !== 'complete') { $('state').textContent = 'Rendering'; return; }
   const current = jobId;
@@ -41,6 +42,7 @@ events.onmessage = async ({data}) => {
   image.src = `/frames/${result.frame}?id=${result.id}`;
   try { await image.decode(); } catch { return; }
   if (current !== jobId) return;
+  completedJobId = current;
   $('live').src = image.src;
   $('state').textContent = 'Up to date';
   $('updating').hidden = true;
