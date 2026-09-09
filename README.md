@@ -2,10 +2,6 @@
 
 A reusable Blender workflow for batched scene edits, measured rendering improvements and visual verification. Includes a Codex skill, local Blender Lab bridge helpers, an original fantasy house example and the raw benchmark results.
 
-The new [local shape-language and teaching workflow](docs/shape-programs.md) adds reusable construction lessons and a small local lesson selector. Three fresh 1,305-object conservatory builds in a warmed Blender process reached the first preview in a median **0.517 seconds** and all three render qualities plus save in **6.750 seconds**. Those times start with prepared JSON and exclude authoring and warmup. Ten-second prompt-to-art generation remains unproven.
-
-The [compact scene-recipe workflow](docs/scene-recipes.md) now adds 23 reusable assembly generators, incremental scene revisions and a live Blender image preview. On the new twenty-assembly celestial archive, the smaller Eevee preview took **0.608 seconds** per warm revision through a saved PNG, **11.84× faster than opt1** and **3.41× faster than optNEW**. It trades resolution and image quality for speed. The same Cycles-8 recipe path measured 1.892 seconds versus optNEW's 2.075 seconds, a much smaller difference. See the guide for quality comparisons, authoring-time boundaries and reproduction.
-
 ![Fantasy house used for the benchmark](docs/house.png)
 
 ## Two different speedups

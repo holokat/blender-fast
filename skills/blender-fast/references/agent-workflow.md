@@ -4,8 +4,6 @@ Use this guide when applying the selected pipeline to a new Blender task. It is 
 
 ## Selected path
 
-For new scenes, check [shape programs and executable lessons](shape-programs.md) first when the brief requires new combinations of construction patterns. Query the local selector, author a compact layout with new JSON definitions as needed, validate, and compile in a warm process. Use the [compact recipe workflow](scene-recipes.md) when its finished generators fit better. Keep stable assembly IDs and count unsupported-shape work separately. Progressive Eevee 4, Cycles 8 and Cycles 64 output is available through the shared profiles; preserve task-specific quality requirements.
-
 Use coherent batches with direct `bpy.data` operations and shared mesh/material data where appropriate. For the verified local Blender Lab bridge, use supported fast polling while preserving faster existing values. For Cycles on the tested M2 Max, select **Metal GPU only, MetalRT Auto, GPU OpenImageDenoise, and persistent data for repeated renders**. Keep the requested quality settings and inspect the resulting image.
 
 This is the best combined path measured here, not a claim that every scene or computer has the same optimum. Both the house and jet used this path successfully. CPU plus GPU and forced MetalRT were slower in the house device comparison. On other hardware, identify the available backend and denoiser support, then measure the corresponding configuration.
