@@ -1,0 +1,191 @@
+{
+  "id": "curved_span",
+  "summary": "Curved bridge and rail",
+  "provenance": "New sampled arch bridge using repeat expressions, beams and shared boxes.",
+  "captions": {
+    "train": [
+      "An arched footbridge with planks and curved rails",
+      "A rising bridge over water",
+      "A curved walkway with railings on both sides",
+      "A small humpback bridge using repeated treads",
+      "A wooden span with an arched deck"
+    ],
+    "test": [
+      "A curved bridge spanning a canal",
+      "An arched walkway and handrails"
+    ]
+  },
+  "program": {
+    "version": 1,
+    "title": "Curved bridge and rail",
+    "palette": {
+      "stone": {
+        "color": [
+          0.43,
+          0.53,
+          0.48
+        ],
+        "roughness": 0.7
+      },
+      "copper": {
+        "color": [
+          0.48,
+          0.23,
+          0.075
+        ],
+        "metallic": 0.75,
+        "roughness": 0.27
+      },
+      "glass": {
+        "color": [
+          0.17,
+          0.58,
+          0.52
+        ],
+        "transmission": 0.45,
+        "roughness": 0.13
+      },
+      "leaf": {
+        "color": [
+          0.07,
+          0.28,
+          0.16
+        ]
+      },
+      "light": {
+        "color": [
+          1,
+          0.53,
+          0.13
+        ],
+        "emission": 4
+      },
+      "dark": {
+        "color": [
+          0.024,
+          0.046,
+          0.058
+        ],
+        "metallic": 0.5
+      },
+      "blue": {
+        "color": [
+          0.02,
+          0.26,
+          0.34
+        ],
+        "metallic": 0.35,
+        "roughness": 0.21
+      }
+    },
+    "definitions": {
+      "curved_span": {
+        "params": {
+          "length": 7,
+          "rise": 1.3,
+          "width": 1.9,
+          "count": 24
+        },
+        "anchors": {},
+        "nodes": [
+          {
+            "op": "repeat",
+            "count": "=count",
+            "index": "j",
+            "step": [
+              "=length/count",
+              0,
+              0
+            ],
+            "at": [
+              "=-length/2",
+              0,
+              0
+            ],
+            "children": [
+              {
+                "op": "box",
+                "size": [
+                  "=length/count*.96",
+                  "=width",
+                  0.17
+                ],
+                "at": [
+                  0,
+                  0,
+                  "=.25+rise*sin(j*pi/(count-1))"
+                ],
+                "material": "stone"
+              },
+              {
+                "op": "repeat",
+                "count": 2,
+                "step": [
+                  0,
+                  "=width",
+                  0
+                ],
+                "at": [
+                  0,
+                  "=-width/2",
+                  0
+                ],
+                "children": [
+                  {
+                    "op": "beam",
+                    "a": [
+                      0,
+                      0,
+                      "=.25+rise*sin(j*pi/(count-1))"
+                    ],
+                    "b": [
+                      0,
+                      0,
+                      "=1.1+rise*sin(j*pi/(count-1))"
+                    ],
+                    "radius": 0.026,
+                    "material": "copper"
+                  },
+                  {
+                    "op": "beam",
+                    "a": [
+                      0,
+                      0,
+                      "=1.1+rise*sin(j*pi/(count-1))"
+                    ],
+                    "b": [
+                      "=length/count",
+                      0,
+                      "=1.1+rise*sin(min(j+1,count-1)*pi/(count-1))"
+                    ],
+                    "radius": 0.045,
+                    "material": "copper"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "assemblies": [
+      {
+        "id": "curved_span",
+        "use": "curved_span"
+      }
+    ],
+    "camera": {
+      "at": [
+        11,
+        -16,
+        12
+      ],
+      "target": [
+        0,
+        0,
+        2
+      ],
+      "ortho_scale": 15
+    }
+  }
+}

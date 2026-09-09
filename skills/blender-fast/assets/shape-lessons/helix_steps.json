@@ -1,0 +1,185 @@
+{
+  "id": "helix_steps",
+  "summary": "Spiral stair and rail",
+  "provenance": "Adapted the spiral repetition in the existing dungeon staircase.",
+  "captions": {
+    "train": [
+      "A helical staircase winding around a central post",
+      "Spiral steps with a brass handrail",
+      "Build a curved stair tower",
+      "Steps ascending in a helix",
+      "A circular staircase with rail posts"
+    ],
+    "test": [
+      "A spiral stair to the roof",
+      "A helical flight of steps"
+    ]
+  },
+  "program": {
+    "version": 1,
+    "title": "Spiral stair and rail",
+    "palette": {
+      "stone": {
+        "color": [
+          0.43,
+          0.53,
+          0.48
+        ],
+        "roughness": 0.7
+      },
+      "copper": {
+        "color": [
+          0.48,
+          0.23,
+          0.075
+        ],
+        "metallic": 0.75,
+        "roughness": 0.27
+      },
+      "glass": {
+        "color": [
+          0.17,
+          0.58,
+          0.52
+        ],
+        "transmission": 0.45,
+        "roughness": 0.13
+      },
+      "leaf": {
+        "color": [
+          0.07,
+          0.28,
+          0.16
+        ]
+      },
+      "light": {
+        "color": [
+          1,
+          0.53,
+          0.13
+        ],
+        "emission": 4
+      },
+      "dark": {
+        "color": [
+          0.024,
+          0.046,
+          0.058
+        ],
+        "metallic": 0.5
+      },
+      "blue": {
+        "color": [
+          0.02,
+          0.26,
+          0.34
+        ],
+        "metallic": 0.35,
+        "roughness": 0.21
+      }
+    },
+    "definitions": {
+      "helix_steps": {
+        "params": {
+          "height": 6,
+          "count": 28,
+          "radius": 1.5
+        },
+        "anchors": {
+          "landing": [
+            0,
+            0,
+            "=height"
+          ]
+        },
+        "nodes": [
+          {
+            "op": "cylinder",
+            "radius": 0.25,
+            "height": "=height",
+            "at": [
+              0,
+              0,
+              "=height/2"
+            ],
+            "material": "stone"
+          },
+          {
+            "op": "repeat",
+            "count": "=count",
+            "turn": [
+              0,
+              0,
+              "=320/count"
+            ],
+            "children": [
+              {
+                "op": "box",
+                "size": [
+                  "=radius",
+                  0.46,
+                  0.14
+                ],
+                "at": [
+                  "=radius*.55",
+                  0,
+                  "=.2+i*height/count"
+                ],
+                "material": "stone"
+              },
+              {
+                "op": "beam",
+                "a": [
+                  "=radius",
+                  0,
+                  "=.2+i*height/count"
+                ],
+                "b": [
+                  "=radius",
+                  0,
+                  "=1.05+i*height/count"
+                ],
+                "radius": 0.025,
+                "material": "copper"
+              },
+              {
+                "op": "beam",
+                "a": [
+                  "=radius",
+                  0,
+                  "=1.05+i*height/count"
+                ],
+                "b": [
+                  "=radius*cos(320*pi/180/count)",
+                  "=radius*sin(320*pi/180/count)",
+                  "=1.05+(i+1)*height/count"
+                ],
+                "radius": 0.04,
+                "material": "copper"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "assemblies": [
+      {
+        "id": "helix_steps",
+        "use": "helix_steps"
+      }
+    ],
+    "camera": {
+      "at": [
+        11,
+        -16,
+        12
+      ],
+      "target": [
+        0,
+        0,
+        2
+      ],
+      "ortho_scale": 15
+    }
+  }
+}

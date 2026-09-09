@@ -1,0 +1,198 @@
+{
+  "id": "pendant_chain",
+  "summary": "Suspended lantern chain",
+  "provenance": "Simplified the existing dungeon chain links and candle emission into a reusable pendant.",
+  "captions": {
+    "train": [
+      "A lantern suspended from chain links",
+      "A hanging lamp on a chain",
+      "A pendant light inside a glass cage",
+      "A glowing lantern hung from the ceiling",
+      "A chain with alternating metal links and a lamp"
+    ],
+    "test": [
+      "A suspended glass lantern",
+      "A pendant hanging from a metal chain"
+    ]
+  },
+  "program": {
+    "version": 1,
+    "title": "Suspended lantern chain",
+    "palette": {
+      "stone": {
+        "color": [
+          0.43,
+          0.53,
+          0.48
+        ],
+        "roughness": 0.7
+      },
+      "copper": {
+        "color": [
+          0.48,
+          0.23,
+          0.075
+        ],
+        "metallic": 0.75,
+        "roughness": 0.27
+      },
+      "glass": {
+        "color": [
+          0.17,
+          0.58,
+          0.52
+        ],
+        "transmission": 0.45,
+        "roughness": 0.13
+      },
+      "leaf": {
+        "color": [
+          0.07,
+          0.28,
+          0.16
+        ]
+      },
+      "light": {
+        "color": [
+          1,
+          0.53,
+          0.13
+        ],
+        "emission": 4
+      },
+      "dark": {
+        "color": [
+          0.024,
+          0.046,
+          0.058
+        ],
+        "metallic": 0.5
+      },
+      "blue": {
+        "color": [
+          0.02,
+          0.26,
+          0.34
+        ],
+        "metallic": 0.35,
+        "roughness": 0.21
+      }
+    },
+    "definitions": {
+      "pendant_chain": {
+        "params": {
+          "length": 2.8,
+          "count": 14
+        },
+        "anchors": {},
+        "nodes": [
+          {
+            "op": "repeat",
+            "count": "=count",
+            "step": [
+              0,
+              0,
+              "=-length/count"
+            ],
+            "children": [
+              {
+                "op": "ring",
+                "radius": 0.09,
+                "tube": 0.022,
+                "rotation": [
+                  90,
+                  0,
+                  "=90*(i%2)"
+                ],
+                "material": "copper",
+                "segments": 12
+              }
+            ]
+          },
+          {
+            "op": "lathe",
+            "profile": [
+              [
+                0.12,
+                "=-length-.9"
+              ],
+              [
+                0.3,
+                "=-length-.78"
+              ],
+              [
+                0.3,
+                "=-length-.15"
+              ],
+              [
+                0.12,
+                "=-length"
+              ]
+            ],
+            "segments": 12,
+            "material": "glass"
+          },
+          {
+            "op": "sphere",
+            "size": [
+              0.13,
+              0.13,
+              0.24
+            ],
+            "at": [
+              0,
+              0,
+              "=-length-.48"
+            ],
+            "material": "light"
+          },
+          {
+            "op": "repeat",
+            "count": 4,
+            "turn": [
+              0,
+              0,
+              90
+            ],
+            "children": [
+              {
+                "op": "beam",
+                "a": [
+                  0.28,
+                  0,
+                  "=-length-.8"
+                ],
+                "b": [
+                  0.28,
+                  0,
+                  "=-length-.12"
+                ],
+                "radius": 0.025,
+                "material": "copper"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "assemblies": [
+      {
+        "id": "pendant_chain",
+        "use": "pendant_chain"
+      }
+    ],
+    "camera": {
+      "at": [
+        11,
+        -16,
+        12
+      ],
+      "target": [
+        0,
+        0,
+        2
+      ],
+      "ortho_scale": 15
+    }
+  }
+}

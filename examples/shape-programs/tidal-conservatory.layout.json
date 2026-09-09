@@ -1,0 +1,840 @@
+{
+  "version": 1,
+  "title": "Tidal conservatory",
+  "palette": {
+    "stone": {
+      "color": [
+        0.62,
+        0.59,
+        0.44
+      ],
+      "roughness": 0.65
+    },
+    "leaf": {
+      "color": [
+        0.04,
+        0.21,
+        0.11
+      ],
+      "roughness": 0.65
+    },
+    "glass": {
+      "color": [
+        0.18,
+        0.55,
+        0.43
+      ],
+      "transmission": 0.38,
+      "roughness": 0.19
+    },
+    "water": {
+      "color": [
+        0.012,
+        0.14,
+        0.19
+      ],
+      "metallic": 0.45,
+      "roughness": 0.16
+    },
+    "terracotta": {
+      "color": [
+        0.39,
+        0.14,
+        0.06
+      ],
+      "roughness": 0.8
+    }
+  },
+  "definitions": {
+    "island": {
+      "nodes": [
+        {
+          "op": "box",
+          "size": [
+            28,
+            24,
+            0.65
+          ],
+          "at": [
+            0,
+            0,
+            -0.7
+          ],
+          "material": "dark"
+        },
+        {
+          "op": "box",
+          "size": [
+            27.6,
+            7.8,
+            0.15
+          ],
+          "at": [
+            0,
+            0,
+            -0.24
+          ],
+          "material": "water"
+        },
+        {
+          "op": "repeat",
+          "count": 2,
+          "index": "side",
+          "step": [
+            0,
+            15.8,
+            0
+          ],
+          "at": [
+            0,
+            -7.9,
+            -0.12
+          ],
+          "children": [
+            {
+              "op": "box",
+              "size": [
+                28,
+                8,
+                0.35
+              ],
+              "material": "stone"
+            },
+            {
+              "op": "repeat",
+              "count": 28,
+              "index": "x",
+              "step": [
+                1,
+                0,
+                0
+              ],
+              "at": [
+                -13.5,
+                -3.5,
+                0.23
+              ],
+              "children": [
+                {
+                  "op": "repeat",
+                  "count": 8,
+                  "index": "y",
+                  "step": [
+                    0,
+                    1,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "op": "box",
+                      "size": [
+                        0.97,
+                        0.97,
+                        0.1
+                      ],
+                      "material": "stone"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "op": "repeat",
+          "count": 2,
+          "step": [
+            0,
+            8.1,
+            0
+          ],
+          "at": [
+            0,
+            -4.05,
+            0.1
+          ],
+          "children": [
+            {
+              "op": "box",
+              "size": [
+                28,
+                0.16,
+                0.15
+              ],
+              "material": "copper"
+            }
+          ]
+        }
+      ]
+    },
+    "planted_bowl": {
+      "params": {
+        "height": 3,
+        "spread": 1.3
+      },
+      "nodes": [
+        {
+          "op": "call",
+          "use": "revolved_bowl",
+          "materials": {
+            "stone": "terracotta"
+          }
+        },
+        {
+          "op": "call",
+          "use": "branch_crown",
+          "at": [
+            0,
+            0,
+            0.92
+          ],
+          "args": {
+            "height": "=height",
+            "spread": "=spread"
+          }
+        }
+      ]
+    },
+    "bench": {
+      "nodes": [
+        {
+          "op": "repeat",
+          "count": 5,
+          "step": [
+            0,
+            0.18,
+            0
+          ],
+          "at": [
+            0,
+            -0.36,
+            0.66
+          ],
+          "children": [
+            {
+              "op": "box",
+              "size": [
+                2.6,
+                0.14,
+                0.13
+              ],
+              "material": "terracotta"
+            }
+          ]
+        },
+        {
+          "op": "repeat",
+          "count": 2,
+          "step": [
+            2,
+            0,
+            0
+          ],
+          "at": [
+            -1,
+            0,
+            0.3
+          ],
+          "children": [
+            {
+              "op": "box",
+              "size": [
+                0.12,
+                0.8,
+                0.6
+              ],
+              "material": "copper"
+            }
+          ]
+        },
+        {
+          "op": "box",
+          "size": [
+            2.6,
+            0.14,
+            0.52
+          ],
+          "at": [
+            0,
+            0.43,
+            1.02
+          ],
+          "material": "terracotta"
+        }
+      ]
+    },
+    "station_clock": {
+      "nodes": [
+        {
+          "op": "cylinder",
+          "radius": 0.8,
+          "height": 0.15,
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "material": "stone"
+        },
+        {
+          "op": "ring",
+          "radius": 0.81,
+          "tube": 0.07,
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "material": "copper"
+        },
+        {
+          "op": "repeat",
+          "count": 12,
+          "turn": [
+            0,
+            30,
+            0
+          ],
+          "children": [
+            {
+              "op": "box",
+              "size": [
+                0.045,
+                0.04,
+                0.11
+              ],
+              "at": [
+                0,
+                -0.09,
+                0.65
+              ],
+              "material": "dark"
+            }
+          ]
+        },
+        {
+          "op": "beam",
+          "a": [
+            0,
+            -0.12,
+            0
+          ],
+          "b": [
+            0.35,
+            -0.12,
+            0.3
+          ],
+          "radius": 0.035,
+          "material": "dark"
+        },
+        {
+          "op": "beam",
+          "a": [
+            0,
+            -0.13,
+            0
+          ],
+          "b": [
+            -0.15,
+            -0.13,
+            0.53
+          ],
+          "radius": 0.023,
+          "material": "dark"
+        },
+        {
+          "op": "beam",
+          "a": [
+            0,
+            0.1,
+            -1.15
+          ],
+          "b": [
+            0,
+            0.1,
+            -0.1
+          ],
+          "radius": 0.06,
+          "material": "copper"
+        }
+      ]
+    },
+    "floating_garden": {
+      "params": {
+        "radius": 1.4
+      },
+      "nodes": [
+        {
+          "op": "cylinder",
+          "radius": "=radius",
+          "height": 0.17,
+          "material": "dark"
+        },
+        {
+          "op": "ring",
+          "radius": "=radius",
+          "tube": 0.05,
+          "material": "copper"
+        },
+        {
+          "op": "repeat",
+          "count": 7,
+          "turn": [
+            0,
+            0,
+            51.43
+          ],
+          "children": [
+            {
+              "op": "sphere",
+              "size": [
+                0.65,
+                0.28,
+                0.08
+              ],
+              "at": [
+                0.55,
+                0,
+                0.13
+              ],
+              "material": "leaf"
+            }
+          ]
+        },
+        {
+          "op": "sphere",
+          "size": [
+            0.26,
+            0.26,
+            0.22
+          ],
+          "at": [
+            0,
+            0,
+            0.29
+          ],
+          "material": "light"
+        }
+      ]
+    },
+    "ticket_kiosk": {
+      "nodes": [
+        {
+          "op": "box",
+          "size": [
+            2.4,
+            1.7,
+            2.5
+          ],
+          "at": [
+            0,
+            0,
+            1.3
+          ],
+          "material": "terracotta"
+        },
+        {
+          "op": "box",
+          "size": [
+            1.75,
+            0.12,
+            1.15
+          ],
+          "at": [
+            0,
+            -0.9,
+            1.76
+          ],
+          "material": "blue"
+        },
+        {
+          "op": "box",
+          "size": [
+            2.7,
+            2,
+            0.15
+          ],
+          "at": [
+            0,
+            0,
+            2.6
+          ],
+          "material": "copper"
+        },
+        {
+          "op": "box",
+          "size": [
+            2,
+            0.5,
+            0.12
+          ],
+          "at": [
+            0,
+            -0.95,
+            1.15
+          ],
+          "material": "stone"
+        },
+        {
+          "op": "text",
+          "text": "Tickets",
+          "size": 0.28,
+          "at": [
+            0,
+            -0.92,
+            2.35
+          ],
+          "rotation": [
+            90,
+            0,
+            0
+          ],
+          "material": "stone"
+        }
+      ]
+    }
+  },
+  "assemblies": [
+    {
+      "id": "foundation",
+      "use": "island"
+    },
+    {
+      "id": "west_roof",
+      "use": "radial_ribs",
+      "at": [
+        -7.5,
+        7.1,
+        0.3
+      ],
+      "args": {
+        "radius": 4.4,
+        "height": 5.8
+      }
+    },
+    {
+      "id": "east_roof",
+      "use": "radial_ribs",
+      "at": [
+        6.8,
+        7,
+        0.3
+      ],
+      "args": {
+        "radius": 3.4,
+        "height": 4.6,
+        "count": 10
+      }
+    },
+    {
+      "id": "arcade",
+      "use": "arch_row",
+      "at": [
+        -5,
+        11,
+        0.3
+      ],
+      "args": {
+        "radius": 1.5,
+        "height": 2.6,
+        "bays": 4
+      }
+    },
+    {
+      "id": "west_facade",
+      "use": "window_grid",
+      "at": [
+        -11.1,
+        11,
+        0.3
+      ],
+      "args": {
+        "width": 4,
+        "height": 6.5,
+        "columns": 3,
+        "rows": 5
+      }
+    },
+    {
+      "id": "east_facade",
+      "use": "window_grid",
+      "at": [
+        10.9,
+        11,
+        0.3
+      ],
+      "args": {
+        "width": 3.8,
+        "height": 5.8,
+        "columns": 3,
+        "rows": 4
+      }
+    },
+    {
+      "id": "clock",
+      "use": "station_clock",
+      "at": [
+        0,
+        10.55,
+        5.1
+      ]
+    },
+    {
+      "id": "main_bridge",
+      "use": "curved_span",
+      "rotation": [
+        0,
+        0,
+        90
+      ],
+      "args": {
+        "length": 9.1,
+        "width": 2.3,
+        "rise": 1.05,
+        "count": 32
+      }
+    },
+    {
+      "id": "west_bridge",
+      "use": "curved_span",
+      "at": [
+        -9.8,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        90
+      ],
+      "args": {
+        "length": 9.1,
+        "width": 1.45,
+        "rise": 0.7,
+        "count": 28
+      }
+    },
+    {
+      "id": "stair_tower",
+      "use": "helix_steps",
+      "at": [
+        10,
+        -8,
+        0.3
+      ],
+      "args": {
+        "height": 4.8,
+        "radius": 1.55,
+        "count": 28
+      }
+    },
+    {
+      "id": "tower_roof",
+      "use": "radial_ribs",
+      "attach": {
+        "to": "stair_tower.landing"
+      },
+      "args": {
+        "radius": 2,
+        "height": 1.7,
+        "count": 8
+      }
+    },
+    {
+      "id": "tower_lantern",
+      "use": "pendant_chain",
+      "attach": {
+        "to": "tower_roof.crown"
+      },
+      "at": [
+        1.1,
+        0,
+        -0.25
+      ],
+      "args": {
+        "length": 1
+      }
+    },
+    {
+      "id": "west_lantern",
+      "use": "pendant_chain",
+      "attach": {
+        "to": "west_roof.crown"
+      },
+      "at": [
+        2,
+        -0.3,
+        -0.2
+      ],
+      "args": {
+        "length": 2.4
+      }
+    },
+    {
+      "id": "east_lantern",
+      "use": "pendant_chain",
+      "attach": {
+        "to": "east_roof.crown"
+      },
+      "at": [
+        1.5,
+        -0.3,
+        -0.2
+      ],
+      "args": {
+        "length": 1.8
+      }
+    },
+    {
+      "id": "front_tree",
+      "use": "planted_bowl",
+      "at": [
+        -5,
+        -8,
+        0.3
+      ],
+      "args": {
+        "height": 3.7,
+        "spread": 1.9
+      }
+    },
+    {
+      "id": "front_tree_two",
+      "use": "planted_bowl",
+      "at": [
+        3.7,
+        -8,
+        0.3
+      ],
+      "args": {
+        "height": 2.8,
+        "spread": 1.4
+      }
+    },
+    {
+      "id": "rear_tree",
+      "use": "planted_bowl",
+      "at": [
+        -3.4,
+        8.5,
+        0.3
+      ],
+      "args": {
+        "height": 2.1,
+        "spread": 1.2
+      }
+    },
+    {
+      "id": "rear_tree_two",
+      "use": "planted_bowl",
+      "at": [
+        3.8,
+        9,
+        0.3
+      ],
+      "args": {
+        "height": 1.9,
+        "spread": 1.15
+      }
+    },
+    {
+      "id": "kiosk",
+      "use": "ticket_kiosk",
+      "at": [
+        -11.2,
+        -9.5,
+        0.3
+      ],
+      "rotation": [
+        0,
+        0,
+        -12
+      ]
+    },
+    {
+      "id": "bench_west",
+      "use": "bench",
+      "at": [
+        -7.2,
+        5.8,
+        0.3
+      ]
+    },
+    {
+      "id": "bench_east",
+      "use": "bench",
+      "at": [
+        6.8,
+        5.6,
+        0.3
+      ]
+    },
+    {
+      "id": "bench_front",
+      "use": "bench",
+      "at": [
+        -0.5,
+        -8,
+        0.3
+      ],
+      "rotation": [
+        0,
+        0,
+        180
+      ]
+    },
+    {
+      "id": "lily_west",
+      "use": "floating_garden",
+      "at": [
+        -5,
+        -0.8,
+        -0.08
+      ]
+    },
+    {
+      "id": "lily_east",
+      "use": "floating_garden",
+      "at": [
+        5.6,
+        0.7,
+        -0.08
+      ],
+      "args": {
+        "radius": 1.2
+      }
+    },
+    {
+      "id": "lily_small",
+      "use": "floating_garden",
+      "at": [
+        9.5,
+        -1.4,
+        -0.08
+      ],
+      "args": {
+        "radius": 0.95
+      }
+    }
+  ],
+  "camera": {
+    "at": [
+      32,
+      -43,
+      36
+    ],
+    "target": [
+      0,
+      0.5,
+      2.2
+    ],
+    "ortho_scale": 43
+  },
+  "lighting": {
+    "key": 1.1,
+    "fill": 0.9,
+    "rim": 1.2,
+    "world": 0.8,
+    "exposure": 0.5
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "id": "radial_ribs",
+  "summary": "Radial petal canopy",
+  "provenance": "New sweep/surface translation of radial repetition used by the dungeon orrery and beach umbrellas.",
+  "captions": {
+    "train": [
+      "A canopy with radial metal ribs and translucent petals",
+      "Build a circular pavilion roof supported by spokes",
+      "An umbrella of repeated curved ribs",
+      "A flower shaped glass canopy with a central pole",
+      "A radial roof structure with petal panels"
+    ],
+    "test": [
+      "A translucent radial canopy for a conservatory",
+      "Twelve spokes forming a flower roof"
+    ]
+  },
+  "program": {
+    "version": 1,
+    "title": "Radial petal canopy",
+    "palette": {
+      "stone": {
+        "color": [
+          0.43,
+          0.53,
+          0.48
+        ],
+        "roughness": 0.7
+      },
+      "copper": {
+        "color": [
+          0.48,
+          0.23,
+          0.075
+        ],
+        "metallic": 0.75,
+        "roughness": 0.27
+      },
+      "glass": {
+        "color": [
+          0.17,
+          0.58,
+          0.52
+        ],
+        "transmission": 0.45,
+        "roughness": 0.13
+      },
+      "leaf": {
+        "color": [
+          0.07,
+          0.28,
+          0.16
+        ]
+      },
+      "light": {
+        "color": [
+          1,
+          0.53,
+          0.13
+        ],
+        "emission": 4
+      },
+      "dark": {
+        "color": [
+          0.024,
+          0.046,
+          0.058
+        ],
+        "metallic": 0.5
+      },
+      "blue": {
+        "color": [
+          0.02,
+          0.26,
+          0.34
+        ],
+        "metallic": 0.35,
+        "roughness": 0.21
+      }
+    },
+    "definitions": {
+      "radial_ribs": {
+        "params": {
+          "radius": 4,
+          "height": 5,
+          "count": 12
+        },
+        "anchors": {
+          "crown": [
+            0,
+            0,
+            "=height"
+          ]
+        },
+        "nodes": [
+          {
+            "op": "cylinder",
+            "radius": 0.19,
+            "height": "=height",
+            "at": [
+              0,
+              0,
+              "=height/2"
+            ],
+            "material": "copper"
+          },
+          {
+            "op": "repeat",
+            "count": "=count",
+            "turn": [
+              0,
+              0,
+              "=360/count"
+            ],
+            "children": [
+              {
+                "op": "sweep",
+                "path": [
+                  [
+                    0,
+                    0,
+                    "=height-.7"
+                  ],
+                  [
+                    "=radius*.3",
+                    0,
+                    "=height+.5"
+                  ],
+                  [
+                    "=radius*.7",
+                    0,
+                    "=height+.25"
+                  ],
+                  [
+                    "=radius",
+                    0,
+                    "=height-.5"
+                  ]
+                ],
+                "radii": [
+                  0.1,
+                  0.07,
+                  0.045,
+                  0.025
+                ],
+                "segments": 8,
+                "material": "copper"
+              },
+              {
+                "op": "surface",
+                "vertices": [
+                  [
+                    0.1,
+                    0,
+                    "=height-.6"
+                  ],
+                  [
+                    "=radius*.4",
+                    "=-radius*.19",
+                    "=height+.38"
+                  ],
+                  [
+                    "=radius*.94",
+                    0,
+                    "=height-.48"
+                  ],
+                  [
+                    "=radius*.4",
+                    "=radius*.19",
+                    "=height+.38"
+                  ],
+                  [
+                    "=radius*.45",
+                    0,
+                    "=height+.58"
+                  ]
+                ],
+                "faces": [
+                  [
+                    0,
+                    1,
+                    4
+                  ],
+                  [
+                    1,
+                    2,
+                    4
+                  ],
+                  [
+                    2,
+                    3,
+                    4
+                  ],
+                  [
+                    3,
+                    0,
+                    4
+                  ]
+                ],
+                "material": "glass"
+              }
+            ]
+          },
+          {
+            "op": "sphere",
+            "size": [
+              0.22,
+              0.22,
+              0.22
+            ],
+            "at": [
+              0,
+              0,
+              "=height+.15"
+            ],
+            "material": "light"
+          }
+        ]
+      }
+    },
+    "assemblies": [
+      {
+        "id": "radial_ribs",
+        "use": "radial_ribs"
+      }
+    ],
+    "camera": {
+      "at": [
+        11,
+        -16,
+        12
+      ],
+      "target": [
+        0,
+        0,
+        2
+      ],
+      "ortho_scale": 15
+    }
+  }
+}

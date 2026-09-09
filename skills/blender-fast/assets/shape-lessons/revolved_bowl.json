@@ -1,0 +1,179 @@
+{
+  "id": "revolved_bowl",
+  "summary": "Revolved planter bowl",
+  "provenance": "New continuous lathe profile inspired by the dungeon bottle and well primitives.",
+  "captions": {
+    "train": [
+      "A hollow planter made by revolving a profile",
+      "A lathed stone bowl with a rim",
+      "A vessel with flared walls and a recessed opening",
+      "A round planter pot with a gold band",
+      "Build a bowl by spinning a cross section"
+    ],
+    "test": [
+      "A revolved vessel with a hollow center",
+      "A broad planter bowl"
+    ]
+  },
+  "program": {
+    "version": 1,
+    "title": "Revolved planter bowl",
+    "palette": {
+      "stone": {
+        "color": [
+          0.43,
+          0.53,
+          0.48
+        ],
+        "roughness": 0.7
+      },
+      "copper": {
+        "color": [
+          0.48,
+          0.23,
+          0.075
+        ],
+        "metallic": 0.75,
+        "roughness": 0.27
+      },
+      "glass": {
+        "color": [
+          0.17,
+          0.58,
+          0.52
+        ],
+        "transmission": 0.45,
+        "roughness": 0.13
+      },
+      "leaf": {
+        "color": [
+          0.07,
+          0.28,
+          0.16
+        ]
+      },
+      "light": {
+        "color": [
+          1,
+          0.53,
+          0.13
+        ],
+        "emission": 4
+      },
+      "dark": {
+        "color": [
+          0.024,
+          0.046,
+          0.058
+        ],
+        "metallic": 0.5
+      },
+      "blue": {
+        "color": [
+          0.02,
+          0.26,
+          0.34
+        ],
+        "metallic": 0.35,
+        "roughness": 0.21
+      }
+    },
+    "definitions": {
+      "revolved_bowl": {
+        "params": {
+          "radius": 1.1,
+          "height": 1.1
+        },
+        "anchors": {
+          "soil": [
+            0,
+            0,
+            "=height*.84"
+          ]
+        },
+        "nodes": [
+          {
+            "op": "lathe",
+            "profile": [
+              [
+                "=radius*.6",
+                0
+              ],
+              [
+                "=radius*.6",
+                0.13
+              ],
+              [
+                "=radius*.85",
+                "=height*.2"
+              ],
+              [
+                "=radius",
+                "=height*.9"
+              ],
+              [
+                "=radius*.98",
+                "=height"
+              ],
+              [
+                "=radius*.83",
+                "=height"
+              ],
+              [
+                "=radius*.78",
+                "=height*.25"
+              ],
+              [
+                0.05,
+                "=height*.2"
+              ]
+            ],
+            "segments": 32,
+            "material": "stone"
+          },
+          {
+            "op": "cylinder",
+            "radius": "=radius*.8",
+            "height": 0.08,
+            "at": [
+              0,
+              0,
+              "=height*.78"
+            ],
+            "material": "dark"
+          },
+          {
+            "op": "ring",
+            "radius": "=radius*.995",
+            "tube": 0.027,
+            "at": [
+              0,
+              0,
+              "=height*.92"
+            ],
+            "material": "copper"
+          }
+        ]
+      }
+    },
+    "assemblies": [
+      {
+        "id": "revolved_bowl",
+        "use": "revolved_bowl"
+      }
+    ],
+    "camera": {
+      "at": [
+        11,
+        -16,
+        12
+      ],
+      "target": [
+        0,
+        0,
+        2
+      ],
+      "ortho_scale": 15
+    }
+  }
+}

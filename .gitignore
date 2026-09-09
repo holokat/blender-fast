@@ -9,3 +9,6 @@ outputs/
 *.log
 .env
 .env.*
+
+# Locally served generated shape-program output
+preview/recipe-viewer/shape-output

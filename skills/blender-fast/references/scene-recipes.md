@@ -1,6 +1,6 @@
 # Compact scene recipes
 
-Use a recipe when the available procedural factories fit the requested scene. The LLM supplies composition, transforms, materials and lighting. Tested functions generate geometry. For unfamiliar shapes, extend a focused factory or use the existing batched Python path. Preserve the requested objects and art direction.
+Use a recipe when the available procedural factories fit the requested scene. The LLM supplies composition, transforms, materials and lighting. Tested functions generate geometry. For unfamiliar shapes, first check the [composable shape language](shape-programs.md), then extend a focused factory or use the existing batched Python path if needed. Preserve the requested objects and art direction.
 
 The library contains 23 architectural, furnishing and instrument types. It is not an arbitrary text-to-3D model. Seeds change supported procedural variation, not the category of object. Each assembly remains an editable collection, with mesh parts parented to a named root. Translation, yaw and scale edit that root; a type or seed change rebuilds the assembly.
 

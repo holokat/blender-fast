@@ -1,0 +1,211 @@
+{
+  "id": "branch_crown",
+  "summary": "Branching botanical crown",
+  "provenance": "New tapered sweep branches with radial leaves, derived from the beach palm construction pattern.",
+  "captions": {
+    "train": [
+      "A branching tree crown with tapered limbs and leaves",
+      "Build a stylized palm with curved branches",
+      "A botanical sculpture with radial foliage",
+      "A tree with spreading branches and glowing fruit",
+      "A tapered trunk and a leafy crown"
+    ],
+    "test": [
+      "A branching crown with seven leaves",
+      "Curved palm branches around a tall trunk"
+    ]
+  },
+  "program": {
+    "version": 1,
+    "title": "Branching botanical crown",
+    "palette": {
+      "stone": {
+        "color": [
+          0.43,
+          0.53,
+          0.48
+        ],
+        "roughness": 0.7
+      },
+      "copper": {
+        "color": [
+          0.48,
+          0.23,
+          0.075
+        ],
+        "metallic": 0.75,
+        "roughness": 0.27
+      },
+      "glass": {
+        "color": [
+          0.17,
+          0.58,
+          0.52
+        ],
+        "transmission": 0.45,
+        "roughness": 0.13
+      },
+      "leaf": {
+        "color": [
+          0.07,
+          0.28,
+          0.16
+        ]
+      },
+      "light": {
+        "color": [
+          1,
+          0.53,
+          0.13
+        ],
+        "emission": 4
+      },
+      "dark": {
+        "color": [
+          0.024,
+          0.046,
+          0.058
+        ],
+        "metallic": 0.5
+      },
+      "blue": {
+        "color": [
+          0.02,
+          0.26,
+          0.34
+        ],
+        "metallic": 0.35,
+        "roughness": 0.21
+      }
+    },
+    "definitions": {
+      "branch_crown": {
+        "params": {
+          "height": 3.4,
+          "spread": 1.5,
+          "count": 7
+        },
+        "anchors": {},
+        "nodes": [
+          {
+            "op": "sweep",
+            "path": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0.1,
+                0,
+                "=height*.5"
+              ],
+              [
+                0.25,
+                0,
+                "=height"
+              ]
+            ],
+            "radii": [
+              0.17,
+              0.11,
+              0.035
+            ],
+            "segments": 10,
+            "material": "copper"
+          },
+          {
+            "op": "repeat",
+            "count": "=count",
+            "turn": [
+              0,
+              0,
+              "=360/count"
+            ],
+            "children": [
+              {
+                "op": "sweep",
+                "path": [
+                  [
+                    0.1,
+                    0,
+                    "=height*.55"
+                  ],
+                  [
+                    "=spread*.4",
+                    0,
+                    "=height*.94"
+                  ],
+                  [
+                    "=spread",
+                    0,
+                    "=height*.86"
+                  ]
+                ],
+                "radii": [
+                  0.06,
+                  0.04,
+                  0.012
+                ],
+                "segments": 8,
+                "material": "copper"
+              },
+              {
+                "op": "sphere",
+                "size": [
+                  "=spread*.67",
+                  0.29,
+                  0.17
+                ],
+                "at": [
+                  "=spread*.75",
+                  0,
+                  "=height*.93"
+                ],
+                "rotation": [
+                  0,
+                  13,
+                  0
+                ],
+                "material": "leaf"
+              },
+              {
+                "op": "sphere",
+                "size": [
+                  0.105,
+                  0.105,
+                  0.18
+                ],
+                "at": [
+                  "=spread*.8",
+                  0,
+                  "=height*.74"
+                ],
+                "material": "light"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "assemblies": [
+      {
+        "id": "branch_crown",
+        "use": "branch_crown"
+      }
+    ],
+    "camera": {
+      "at": [
+        11,
+        -16,
+        12
+      ],
+      "target": [
+        0,
+        0,
+        2
+      ],
+      "ortho_scale": 15
+    }
+  }
+}

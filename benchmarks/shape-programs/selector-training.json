@@ -1,0 +1,317 @@
+{
+  "training_seconds": 0.01525995799999999,
+  "steps": 600,
+  "training_examples": 40,
+  "test_examples": 16,
+  "training_loss_first_last": [
+    2.079441541671836,
+    0.21708527583274678
+  ],
+  "vocabulary_size": 133,
+  "parameter_count": 1072,
+  "softmax": {
+    "top1_correct": 16,
+    "top3_correct": 16,
+    "count": 16,
+    "predictions": [
+      {
+        "prompt": "Three arches along a courtyard",
+        "expected": "arch_row",
+        "ranked": [
+          "arch_row",
+          "helix_steps",
+          "curved_span"
+        ]
+      },
+      {
+        "prompt": "A stone arcade with broad openings",
+        "expected": "arch_row",
+        "ranked": [
+          "arch_row",
+          "revolved_bowl",
+          "helix_steps"
+        ]
+      },
+      {
+        "prompt": "A branching crown with seven leaves",
+        "expected": "branch_crown",
+        "ranked": [
+          "branch_crown",
+          "revolved_bowl",
+          "helix_steps"
+        ]
+      },
+      {
+        "prompt": "Curved palm branches around a tall trunk",
+        "expected": "branch_crown",
+        "ranked": [
+          "branch_crown",
+          "helix_steps",
+          "curved_span"
+        ]
+      },
+      {
+        "prompt": "A curved bridge spanning a canal",
+        "expected": "curved_span",
+        "ranked": [
+          "curved_span",
+          "helix_steps",
+          "radial_ribs"
+        ]
+      },
+      {
+        "prompt": "An arched walkway and handrails",
+        "expected": "curved_span",
+        "ranked": [
+          "curved_span",
+          "arch_row",
+          "revolved_bowl"
+        ]
+      },
+      {
+        "prompt": "A spiral stair to the roof",
+        "expected": "helix_steps",
+        "ranked": [
+          "helix_steps",
+          "radial_ribs",
+          "revolved_bowl"
+        ]
+      },
+      {
+        "prompt": "A helical flight of steps",
+        "expected": "helix_steps",
+        "ranked": [
+          "helix_steps",
+          "revolved_bowl",
+          "curved_span"
+        ]
+      },
+      {
+        "prompt": "A suspended glass lantern",
+        "expected": "pendant_chain",
+        "ranked": [
+          "pendant_chain",
+          "radial_ribs",
+          "revolved_bowl"
+        ]
+      },
+      {
+        "prompt": "A pendant hanging from a metal chain",
+        "expected": "pendant_chain",
+        "ranked": [
+          "pendant_chain",
+          "radial_ribs",
+          "revolved_bowl"
+        ]
+      },
+      {
+        "prompt": "A translucent radial canopy for a conservatory",
+        "expected": "radial_ribs",
+        "ranked": [
+          "radial_ribs",
+          "branch_crown",
+          "revolved_bowl"
+        ]
+      },
+      {
+        "prompt": "Twelve spokes forming a flower roof",
+        "expected": "radial_ribs",
+        "ranked": [
+          "radial_ribs",
+          "revolved_bowl",
+          "curved_span"
+        ]
+      },
+      {
+        "prompt": "A revolved vessel with a hollow center",
+        "expected": "revolved_bowl",
+        "ranked": [
+          "revolved_bowl",
+          "helix_steps",
+          "curved_span"
+        ]
+      },
+      {
+        "prompt": "A broad planter bowl",
+        "expected": "revolved_bowl",
+        "ranked": [
+          "revolved_bowl",
+          "helix_steps",
+          "curved_span"
+        ]
+      },
+      {
+        "prompt": "A tall facade covered in window rows",
+        "expected": "window_grid",
+        "ranked": [
+          "window_grid",
+          "arch_row",
+          "revolved_bowl"
+        ]
+      },
+      {
+        "prompt": "A repeated grid of glazed windows",
+        "expected": "window_grid",
+        "ranked": [
+          "window_grid",
+          "arch_row",
+          "radial_ribs"
+        ]
+      }
+    ]
+  },
+  "centroid_baseline": {
+    "top1_correct": 16,
+    "top3_correct": 16,
+    "count": 16,
+    "predictions": [
+      {
+        "prompt": "Three arches along a courtyard",
+        "expected": "arch_row",
+        "ranked": [
+          "arch_row",
+          "branch_crown",
+          "curved_span"
+        ]
+      },
+      {
+        "prompt": "A stone arcade with broad openings",
+        "expected": "arch_row",
+        "ranked": [
+          "arch_row",
+          "revolved_bowl",
+          "branch_crown"
+        ]
+      },
+      {
+        "prompt": "A branching crown with seven leaves",
+        "expected": "branch_crown",
+        "ranked": [
+          "branch_crown",
+          "arch_row",
+          "curved_span"
+        ]
+      },
+      {
+        "prompt": "Curved palm branches around a tall trunk",
+        "expected": "branch_crown",
+        "ranked": [
+          "branch_crown",
+          "helix_steps",
+          "curved_span"
+        ]
+      },
+      {
+        "prompt": "A curved bridge spanning a canal",
+        "expected": "curved_span",
+        "ranked": [
+          "curved_span",
+          "helix_steps",
+          "radial_ribs"
+        ]
+      },
+      {
+        "prompt": "An arched walkway and handrails",
+        "expected": "curved_span",
+        "ranked": [
+          "curved_span",
+          "arch_row",
+          "branch_crown"
+        ]
+      },
+      {
+        "prompt": "A spiral stair to the roof",
+        "expected": "helix_steps",
+        "ranked": [
+          "helix_steps",
+          "radial_ribs",
+          "arch_row"
+        ]
+      },
+      {
+        "prompt": "A helical flight of steps",
+        "expected": "helix_steps",
+        "ranked": [
+          "helix_steps",
+          "arch_row",
+          "branch_crown"
+        ]
+      },
+      {
+        "prompt": "A suspended glass lantern",
+        "expected": "pendant_chain",
+        "ranked": [
+          "pendant_chain",
+          "radial_ribs",
+          "arch_row"
+        ]
+      },
+      {
+        "prompt": "A pendant hanging from a metal chain",
+        "expected": "pendant_chain",
+        "ranked": [
+          "pendant_chain",
+          "radial_ribs",
+          "arch_row"
+        ]
+      },
+      {
+        "prompt": "A translucent radial canopy for a conservatory",
+        "expected": "radial_ribs",
+        "ranked": [
+          "radial_ribs",
+          "branch_crown",
+          "arch_row"
+        ]
+      },
+      {
+        "prompt": "Twelve spokes forming a flower roof",
+        "expected": "radial_ribs",
+        "ranked": [
+          "radial_ribs",
+          "arch_row",
+          "branch_crown"
+        ]
+      },
+      {
+        "prompt": "A revolved vessel with a hollow center",
+        "expected": "revolved_bowl",
+        "ranked": [
+          "revolved_bowl",
+          "arch_row",
+          "branch_crown"
+        ]
+      },
+      {
+        "prompt": "A broad planter bowl",
+        "expected": "revolved_bowl",
+        "ranked": [
+          "revolved_bowl",
+          "arch_row",
+          "branch_crown"
+        ]
+      },
+      {
+        "prompt": "A tall facade covered in window rows",
+        "expected": "window_grid",
+        "ranked": [
+          "window_grid",
+          "arch_row",
+          "branch_crown"
+        ]
+      },
+      {
+        "prompt": "A repeated grid of glazed windows",
+        "expected": "window_grid",
+        "ranked": [
+          "window_grid",
+          "arch_row",
+          "radial_ribs"
+        ]
+      }
+    ]
+  },
+  "selected": "softmax",
+  "corpus_sha256": "fb9be2280aa4bcec64505ca141d2751e3edfe539bb5b265d80bc681bb47d2819",
+  "scope": "Agent-authored captions of eight executable shape lessons. Held-out wording within known classes, not unseen object categories or a geometry-generating model."
+}

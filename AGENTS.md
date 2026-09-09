@@ -4,7 +4,7 @@ For Blender modeling, automation or rendering work in this repository, read [the
 
 Keep geometry creation, bridge latency and rendering timings separate. Publish speed claims only with their scene, hardware, quality settings, timing scope and raw evidence. Do not multiply stage speedups or present recorded playback as simultaneous execution.
 
-For new scenes, check `skills/blender-fast/references/scene-recipes.md`. Reuse generators when they fit the brief, preserve stable assembly IDs, and measure recipe authoring separately from library development. Extend unsupported shapes explicitly. The interactive Eevee profile trades quality for speed and does not establish a faster equivalent-quality Cycles final.
+For new scenes, check `skills/blender-fast/references/shape-programs.md` for composable construction lessons and `skills/blender-fast/references/scene-recipes.md` for finished asset factories. Reuse generators when they fit the brief, preserve stable assembly IDs, and measure recipe authoring separately from library development. Extend unsupported shapes explicitly. The interactive Eevee profile trades quality for speed and does not establish a faster equivalent-quality Cycles final.
 
 Reuse the existing protocol client and isolated examples. Never clear an unrelated scene, save global preferences incidentally, or retry an uncertain mutation automatically. Read the scoped rollback guidance in the skill.
 

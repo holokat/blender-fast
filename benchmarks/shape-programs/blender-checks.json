@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "lessons_built": 8,
+  "initial": {
+    "validation_seconds": 0.04643799993209541,
+    "apply_seconds": 0.06432283390313387,
+    "rebuilt": [
+      "arch_row",
+      "branch_crown",
+      "curved_span",
+      "helix_steps",
+      "pendant_chain",
+      "radial_ribs",
+      "revolved_bowl",
+      "window_grid"
+    ],
+    "transformed": [],
+    "removed": [],
+    "program_sha256": "7a3a4df62d33be79a73d5420c159a602d0bf8012eefa8bb5e577e730802356d9",
+    "budget": {
+      "parts": 375,
+      "vertices": 16330,
+      "visits": 648
+    }
+  },
+  "no_op": {
+    "validation_seconds": 0.0459664580412209,
+    "apply_seconds": 0.04655637498944998,
+    "rebuilt": [],
+    "transformed": [],
+    "removed": [],
+    "program_sha256": "7a3a4df62d33be79a73d5420c159a602d0bf8012eefa8bb5e577e730802356d9",
+    "budget": {
+      "parts": 375,
+      "vertices": 16330,
+      "visits": 648
+    }
+  },
+  "transform": {
+    "validation_seconds": 0.04733545915223658,
+    "apply_seconds": 0.04880320909433067,
+    "rebuilt": [],
+    "transformed": [
+      "arch_row"
+    ],
+    "removed": [],
+    "program_sha256": "a9cf593b26cae784f32400a464d2c604b093e5095f59db0bf8db19a9917c814c",
+    "budget": {
+      "parts": 375,
+      "vertices": 16330,
+      "visits": 648
+    }
+  },
+  "rebuild": {
+    "validation_seconds": 0.03647308284416795,
+    "apply_seconds": 0.04329120786860585,
+    "rebuilt": [
+      "planter"
+    ],
+    "transformed": [],
+    "removed": [],
+    "program_sha256": "624b3b1e44fa470153c73a9f2ff488c78fe1e76f85886a037f99705668c1a8f5",
+    "budget": {
+      "parts": 321,
+      "vertices": 15458,
+      "visits": 527
+    }
+  },
+  "inventory": {
+    "assemblies": 8,
+    "objects": 334,
+    "mesh_objects": 321,
+    "mesh_datablocks": 20,
+    "faces": 10610,
+    "program_sha256": "624b3b1e44fa470153c73a9f2ff488c78fe1e76f85886a037f99705668c1a8f5"
+  },
+  "checks": [
+    "isolated user scene",
+    "all lesson meshes valid",
+    "no-op object and mesh identity",
+    "transform-only identity",
+    "attachment affine preservation",
+    "invalid graph leaves scene untouched",
+    "only changed shape rebuilt",
+    "material defaults restored"
+  ]
+}

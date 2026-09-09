@@ -1,0 +1,7 @@
+{
+  "observed_checkpoint_start_utc": "2026-09-09T04:29:14Z",
+  "first_valid_layout_unix": 1788928282.2904031,
+  "checkpoint_to_valid_layout_seconds": 128.2904031276703,
+  "scope": "Clock checkpoint before the scene-authoring commentary through first valid composed program. Includes orchestration and writing new JSON definitions; excludes earlier planning, compiler and lesson development. This is not prompt-to-done latency.",
+  "discarded_measurement": "An initial in-shell timestamp omitted model output generation and was discarded."
+}

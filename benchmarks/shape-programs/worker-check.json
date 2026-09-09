@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "invalid_profile": {
+    "error": "Unknown profile"
+  },
+  "subsequent_valid_revision": {
+    "build": {
+      "validation_seconds": 0.12532154098153114,
+      "apply_seconds": 0.12833262491039932,
+      "rebuilt": [],
+      "transformed": [
+        "bench_front"
+      ],
+      "removed": [],
+      "program_sha256": "923ea1933a8f689ccb3291c0521b9f4eaf9f5fff8e6eb2ea4843f11c3cd95442",
+      "budget": {
+        "parts": 1275,
+        "vertices": 56154,
+        "visits": 2480
+      }
+    },
+    "render": {
+      "profile": "interactive",
+      "engine": "BLENDER_EEVEE",
+      "samples": 4,
+      "resolution": [
+        800,
+        550
+      ],
+      "devices": [
+        "Eevee GPU"
+      ],
+      "blender": "5.2.0 LTS",
+      "render_seconds": 0.14408391597680748,
+      "file": "live.png"
+    },
+    "inventory": {
+      "assemblies": 25,
+      "objects": 1305,
+      "mesh_objects": 1274,
+      "mesh_datablocks": 35,
+      "faces": 41972,
+      "program_sha256": "923ea1933a8f689ccb3291c0521b9f4eaf9f5fff8e6eb2ea4843f11c3cd95442"
+    },
+    "total_seconds": 0.2739367079921067
+  },
+  "worker_exited_cleanly_on_eof": true
+}

@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "no_op": {
+    "validation_seconds": 0.1283832499757409,
+    "apply_seconds": 0.1303136250935495,
+    "rebuilt": [],
+    "transformed": [],
+    "removed": [],
+    "program_sha256": "2ed712b1f0bbcf847526f6b0ea8adce1b252983b8a6d4b9cd1060cb22093b06a",
+    "budget": {
+      "parts": 1275,
+      "vertices": 56154,
+      "visits": 2480
+    }
+  },
+  "inventory": {
+    "assemblies": 25,
+    "objects": 1305,
+    "mesh_objects": 1274,
+    "mesh_datablocks": 35,
+    "faces": 41972,
+    "program_sha256": "2ed712b1f0bbcf847526f6b0ea8adce1b252983b8a6d4b9cd1060cb22093b06a"
+  }
+}

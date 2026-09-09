@@ -1,0 +1,103 @@
+{
+  "title": "Tidal conservatory",
+  "timing_scope": "Prepared program through build, profiles and optional save; excludes authoring and Blender startup",
+  "build": {
+    "validation_seconds": 0.12883983389474452,
+    "apply_seconds": 0.18849608395248652,
+    "rebuilt": [
+      "foundation",
+      "west_roof",
+      "east_roof",
+      "arcade",
+      "west_facade",
+      "east_facade",
+      "clock",
+      "main_bridge",
+      "west_bridge",
+      "stair_tower",
+      "tower_roof",
+      "tower_lantern",
+      "west_lantern",
+      "east_lantern",
+      "front_tree",
+      "front_tree_two",
+      "rear_tree",
+      "rear_tree_two",
+      "kiosk",
+      "bench_west",
+      "bench_east",
+      "bench_front",
+      "lily_west",
+      "lily_east",
+      "lily_small"
+    ],
+    "transformed": [],
+    "removed": [],
+    "program_sha256": "dd43356545ea57d30dd6ca8200e5ef74d0f38839720f7553a814f23d9d605eef",
+    "budget": {
+      "parts": 1274,
+      "vertices": 56106,
+      "visits": 2479
+    }
+  },
+  "inventory": {
+    "assemblies": 25,
+    "objects": 1304,
+    "mesh_objects": 1273,
+    "mesh_datablocks": 35,
+    "faces": 41946,
+    "program_sha256": "dd43356545ea57d30dd6ca8200e5ef74d0f38839720f7553a814f23d9d605eef"
+  },
+  "renders": [
+    {
+      "profile": "interactive",
+      "engine": "BLENDER_EEVEE",
+      "samples": 4,
+      "resolution": [
+        800,
+        550
+      ],
+      "devices": [
+        "Eevee GPU"
+      ],
+      "blender": "5.2.0 LTS",
+      "render_seconds": 5.644057042198256,
+      "file": "interactive.png",
+      "elapsed_seconds": 5.834712916985154
+    },
+    {
+      "profile": "optNEW",
+      "engine": "CYCLES",
+      "samples": 8,
+      "resolution": [
+        1600,
+        1100
+      ],
+      "devices": [
+        "Apple M2 Max (GPU - 30 cores)"
+      ],
+      "blender": "5.2.0 LTS",
+      "render_seconds": 13.222888165852055,
+      "file": "optNEW.png",
+      "elapsed_seconds": 19.058375249849632
+    },
+    {
+      "profile": "opt1",
+      "engine": "CYCLES",
+      "samples": 64,
+      "resolution": [
+        1600,
+        1100
+      ],
+      "devices": [
+        "Apple M2 Max (GPU - 30 cores)"
+      ],
+      "blender": "5.2.0 LTS",
+      "render_seconds": 5.506812750129029,
+      "file": "opt1.png",
+      "elapsed_seconds": 24.5657089590095
+    }
+  ],
+  "save_seconds": 0.04533054097555578,
+  "total_seconds": 24.61151183396578
+}

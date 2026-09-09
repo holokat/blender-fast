@@ -4,7 +4,7 @@ Use this guide when applying the selected pipeline to a new Blender task. It is 
 
 ## Selected path
 
-For new scenes, first check the [compact recipe workflow](scene-recipes.md). When its generators fit the brief, author composition and parameters as a recipe and reuse the compiler. Use stable assembly IDs for revisions. Extend unsupported shapes explicitly and track library-development time separately from each request.
+For new scenes, check [shape programs and executable lessons](shape-programs.md) first when the brief requires new combinations of construction patterns. Query the local selector, author a compact layout with new JSON definitions as needed, validate, and compile in a warm process. Use the [compact recipe workflow](scene-recipes.md) when its finished generators fit better. Keep stable assembly IDs and count unsupported-shape work separately. Progressive Eevee 4, Cycles 8 and Cycles 64 output is available through the shared profiles; preserve task-specific quality requirements.
 
 Use coherent batches with direct `bpy.data` operations and shared mesh/material data where appropriate. For the verified local Blender Lab bridge, use supported fast polling while preserving faster existing values. For Cycles on the tested M2 Max, select **Metal GPU only, MetalRT Auto, GPU OpenImageDenoise, and persistent data for repeated renders**. Keep the requested quality settings and inspect the resulting image.
 

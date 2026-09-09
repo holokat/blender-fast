@@ -9,7 +9,7 @@ Use this workflow for Blender work. Preserve the user's scene, chosen tools and 
 
 ## Default combined path
 
-For scene creation, first check whether the compact recipe library fits the brief. Read [references/scene-recipes.md](references/scene-recipes.md) for the supported factories and interface. Prefer short scene specifications and tested generators over rewriting a complete builder. Extend the library for unfamiliar shapes when useful. Preserve requested objects and art direction; apply revisions by assembly ID and skip unchanged data.
+For scene creation, first check the reusable construction libraries. Use [shape programs and executable lessons](references/shape-programs.md) to compose unfamiliar scenes from repeated shapes, profiles, curves, surfaces and named attachments. Query the local lesson selector and adapt relevant examples before writing new Python. Use [scene recipes](references/scene-recipes.md) when their finished assembly generators fit better. Preserve requested objects and art direction; apply revisions by assembly ID and skip unchanged data. Teach verified reusable constructions back into a task-owned lesson library, then review and update the installed library when authorized.
 
 Start with batched direct-data edits and shared mesh/material data where suitable. For the verified Blender Lab bridge, use supported fast polling while preserving already-faster settings. For Cycles on the tested M2 Max, use Metal GPU only, MetalRT Auto, GPU OpenImageDenoise and persistent data for repeated renders in the same process. Preserve the task's renderer and quality requirements; inspect and measure the equivalent configuration on other hardware.
 
@@ -53,7 +53,7 @@ Use preview render settings during iteration and restore or explicitly record fi
 
 ## Report timings honestly
 
-Measure recipe authoring separately from reusable library development. Executing prepared JSON quickly does not establish prompt-to-done latency. The recipe workflow offers explicit Eevee and low-sample Cycles preview profiles; report their resolution and quality tradeoffs, and preserve final-output requirements.
+Measure program or recipe authoring separately from reusable library development. Warm prepared-program execution under ten seconds does not establish ten-second prompt-to-art generation. Executing prepared JSON quickly does not establish prompt-to-done latency. The recipe workflow offers explicit Eevee and low-sample Cycles preview profiles; report their resolution and quality tradeoffs, and preserve final-output requirements.
 
 Separate model/tool orchestration, bridge waiting, scene setup, geometry construction, validation, saving and rendering. For a performance comparison, hold the scene, builder and output checks constant. Record batch size, call count, Blender/add-on versions, machine and sample count.
 

@@ -1,0 +1,199 @@
+{
+  "id": "window_grid",
+  "summary": "Parametric window facade",
+  "provenance": "Converted the repeated window rows in the existing beach hotel generator.",
+  "captions": {
+    "train": [
+      "A facade with a grid of windows",
+      "A building wall with repeated window rows",
+      "Arrange framed windows across a hotel facade",
+      "A multistory window grid and a cornice",
+      "A parametric architectural facade with window sills"
+    ],
+    "test": [
+      "A tall facade covered in window rows",
+      "A repeated grid of glazed windows"
+    ]
+  },
+  "program": {
+    "version": 1,
+    "title": "Parametric window facade",
+    "palette": {
+      "stone": {
+        "color": [
+          0.43,
+          0.53,
+          0.48
+        ],
+        "roughness": 0.7
+      },
+      "copper": {
+        "color": [
+          0.48,
+          0.23,
+          0.075
+        ],
+        "metallic": 0.75,
+        "roughness": 0.27
+      },
+      "glass": {
+        "color": [
+          0.17,
+          0.58,
+          0.52
+        ],
+        "transmission": 0.45,
+        "roughness": 0.13
+      },
+      "leaf": {
+        "color": [
+          0.07,
+          0.28,
+          0.16
+        ]
+      },
+      "light": {
+        "color": [
+          1,
+          0.53,
+          0.13
+        ],
+        "emission": 4
+      },
+      "dark": {
+        "color": [
+          0.024,
+          0.046,
+          0.058
+        ],
+        "metallic": 0.5
+      },
+      "blue": {
+        "color": [
+          0.02,
+          0.26,
+          0.34
+        ],
+        "metallic": 0.35,
+        "roughness": 0.21
+      }
+    },
+    "definitions": {
+      "window_grid": {
+        "params": {
+          "width": 5,
+          "height": 6,
+          "columns": 4,
+          "rows": 5
+        },
+        "anchors": {},
+        "nodes": [
+          {
+            "op": "box",
+            "size": [
+              "=width",
+              0.5,
+              "=height"
+            ],
+            "at": [
+              0,
+              0,
+              "=height/2"
+            ],
+            "material": "stone"
+          },
+          {
+            "op": "repeat",
+            "count": "=rows",
+            "index": "row",
+            "step": [
+              0,
+              0,
+              "=height/(rows+1)"
+            ],
+            "at": [
+              0,
+              -0.29,
+              "=height/(rows+1)"
+            ],
+            "children": [
+              {
+                "op": "repeat",
+                "count": "=columns",
+                "index": "column",
+                "step": [
+                  "=width/(columns+1)",
+                  0,
+                  0
+                ],
+                "at": [
+                  "=-width/2+width/(columns+1)",
+                  0,
+                  0
+                ],
+                "children": [
+                  {
+                    "op": "box",
+                    "size": [
+                      "=width/(columns+1)*.7",
+                      0.08,
+                      "=height/(rows+1)*.7"
+                    ],
+                    "material": "blue"
+                  },
+                  {
+                    "op": "box",
+                    "size": [
+                      "=width/(columns+1)*.78",
+                      0.2,
+                      0.055
+                    ],
+                    "at": [
+                      0,
+                      -0.02,
+                      "=-height/(rows+1)*.38"
+                    ],
+                    "material": "copper"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "op": "box",
+            "size": [
+              "=width+.3",
+              0.8,
+              0.16
+            ],
+            "at": [
+              0,
+              0,
+              "=height"
+            ],
+            "material": "copper"
+          }
+        ]
+      }
+    },
+    "assemblies": [
+      {
+        "id": "window_grid",
+        "use": "window_grid"
+      }
+    ],
+    "camera": {
+      "at": [
+        11,
+        -16,
+        12
+      ],
+      "target": [
+        0,
+        0,
+        2
+      ],
+      "ortho_scale": 15
+    }
+  }
+}

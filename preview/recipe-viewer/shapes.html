@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shape lessons · Blender fast</title>
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="shapes.css">
+<script type="module" src="shapes.js"></script>
+</head>
+<body><main>
+<nav aria-label="Scenes"><a href="/">Celestial archive</a><a href="beach.html">Beach town</a><span aria-current="page">Shape lessons</span></nav>
+<header><p class="eyebrow">Blender fast / Executable shape lessons</p><h1 id="title">Loading scene</h1>
+<p class="intro">A new scene composed from reusable construction lessons. These are Blender renders of editable geometry.</p></header>
+<div class="controls"><label>View rendered quality<select id="quality" disabled><option value="interactive">Fast preview · Eevee 4</option><option value="optNEW">Preview · Cycles 8</option><option value="opt1" selected>Finished · Cycles 64</option></select></label>
+<p id="status" role="status" aria-live="polite">Loading measurements</p>
+<div class="actions"><a id="program" class="download">Construction program</a><a id="blend" class="download">Editable scene</a></div></div>
+<figure><img id="render" alt="Blender render of the tidal conservatory" hidden><figcaption><span id="frame-timing"></span><span id="frame-config"></span></figcaption></figure>
+<section aria-labelledby="timing-title"><h2 id="timing-title">Measured construction and rendering</h2>
+<p class="intro" id="scope"></p>
+<div class="table-wrap"><table><thead><tr><th>Stage</th><th>Time for stage</th><th>Time since build started</th></tr></thead><tbody id="timings"></tbody></table></div>
+<p class="note" id="inventory"></p></section>
+<section aria-labelledby="teaching-title"><h2 id="teaching-title">What the system learned</h2>
+<p class="intro">Eight executable lessons describe arches, curved spans, branching crowns, window grids, spiral steps, revolved bowls, radial roofs, and hanging lanterns. A small local model selects relevant lessons; the agent combines and adapts them into a construction program.</p>
+<p class="note">Selecting a saved quality above changes the displayed image. It does not trigger a new render. The measurements exclude prompt interpretation and authoring. General ten-second text-to-scene generation has not been demonstrated.</p>
+</section>
+</main></body></html>
