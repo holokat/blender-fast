@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Celestial archive · Blender recipe preview</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<main>
+  <header><p class="eyebrow">Blender fast / Recipe experiment</p><h1>Celestial archive</h1><p class="intro">Twenty distinct assemblies, built from a compact recipe. Change the scene and watch Blender render the result.</p></header>
+  <section class="controls" aria-label="Scene controls">
+    <label>Preview quality<select id="quality"><option value="interactive">Fast · 800 × 550</option><option value="eevee">Eevee · 1600 × 1100</option><option value="optNEW">Cycles · 8 samples</option><option value="opt1">Cycles · 64 samples</option></select></label>
+    <label>Key light<input id="light" type="range" min="0.3" max="2" step="0.05" value="1.1"></label>
+    <label class="toggle"><input id="layout" type="checkbox">Rearrange nine assemblies</label>
+    <div class="actions"><button id="reset">Reset view</button><button id="save">Save editable scene</button><a id="download" href="/scene-live.blend" hidden download>Download scene</a></div>
+  </section>
+  <section class="views" aria-label="Rendered views">
+    <figure><div class="figure-title"><h2>Live Blender render</h2><span id="state" role="status">Starting preview</span></div><div class="image-wrap"><img id="live" src="/initial.png" alt="Live rendering of the celestial archive" draggable="false" tabindex="0"><span id="updating" hidden>Rendering this change</span></div><figcaption><span id="latency">Drag to orbit. Arrow keys also move the camera.</span><span id="engine"></span></figcaption></figure>
+    <figure><div class="figure-title"><h2>Cycles reference</h2><span>Original view · 64 samples</span></div><img src="/reference.png" alt="Original celestial archive rendered with 64-sample Cycles"><figcaption>This fixed reference shows the original lighting and layout. The live view reflects your changes.</figcaption></figure>
+  </section>
+  <section class="measurements"><h2>Measured revision speed</h2><p>Ten revisions per path on the same scene. These timings include applying an already written change, rendering, and PNG output. Different preview settings trade quality for speed.</p><table><thead><tr><th>Path</th><th>Median</th><th>vs opt1</th><th>vs optNEW</th></tr></thead><tbody id="results"><tr><td colspan="4">Loading recorded measurements</td></tr></tbody></table></section>
+  <footer><p>Images come from Blender. Input-to-image time includes the 80 ms edit settling interval when used, request queuing, rendering, transfer and decoding. Rendering runs on one GPU, with pending edits coalesced.</p></footer>
+</main><script type="module" src="app.js"></script>
+</body></html>

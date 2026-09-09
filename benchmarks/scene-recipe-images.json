@@ -1,0 +1,43 @@
+{
+  "same_Cycles8_comparison": [
+    {
+      "frame": "first",
+      "mae": 2.3666074412176386e-05,
+      "max_error": 0.003921627998352051,
+      "psnr_db": 70.32413915210887,
+      "identical": false
+    },
+    {
+      "frame": "edit-00",
+      "mae": 8.172980597009882e-05,
+      "max_error": 0.09019607305526733,
+      "psnr_db": 64.17651318592982,
+      "identical": false
+    },
+    {
+      "frame": "edit-04",
+      "mae": 0.00010187389852944762,
+      "max_error": 0.22352942824363708,
+      "psnr_db": 58.448371160245046,
+      "identical": false
+    }
+  ],
+  "scope": "Decoded display RGB comparison, identical scene and settings, per-part versus recipe-root representation. PSNR is null when pixels are identical.",
+  "reference_png_metadata": {
+    "oiio:ColorSpace": "srgb_rec709_scene",
+    "Date": "2026/09/09 11:20:25",
+    "Time": "00:00:00:01",
+    "Frame": "001",
+    "Camera": "Recipe camera",
+    "Scene": "Celestial archive",
+    "RenderTime": "00:07.68",
+    "Memory": "5999M",
+    "cycles.ViewLayer.samples": "64",
+    "cycles.ViewLayer.total_time": "00:07.48",
+    "cycles.ViewLayer.render_time": "00:07.25",
+    "cycles.ViewLayer.synchronization_time": "00:00.22",
+    "ResolutionUnit": "inch",
+    "XResolution": "72.0",
+    "YResolution": "72.0"
+  }
+}

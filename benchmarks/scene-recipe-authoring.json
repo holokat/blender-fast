@@ -1,0 +1,61 @@
+{
+  "started_unix": 1788919287.575,
+  "scope": "Agent checkpoint immediately before authoring the fresh celestial-archive JSON. Reusable compiler and factory development excluded.",
+  "first_saved_result_seconds": 76.63629388809204,
+  "visual_review_complete_seconds": 113.1758930683136,
+  "review": "All twenty distinct assemblies visible; scene framing, contacts and warm/cool lighting accepted for the first preview. No geometry correction needed.",
+  "recipe_bytes": 2511,
+  "result": {
+    "apply_seconds": 0.4369892079848796,
+    "rebuilt": [
+      "hall",
+      "gateway",
+      "stairs",
+      "orrery",
+      "throne",
+      "ritual",
+      "well",
+      "passage",
+      "alchemy",
+      "library",
+      "armory",
+      "supplies",
+      "hoist",
+      "organ",
+      "reactor",
+      "tomb",
+      "treasury",
+      "desk",
+      "telescope",
+      "chandelier"
+    ],
+    "transformed": [],
+    "removed": [],
+    "recipe_sha256": "0cba362500792da32a896d045a040f6f5b1a37560bb93c80a51d6e23356db17c",
+    "assemblies": 20,
+    "distinct_types": 20,
+    "mesh_objects": 6869,
+    "faces": 260854,
+    "shared_meshes": 91,
+    "lights": 16,
+    "settings": {
+      "profile": "optNEW",
+      "engine": "CYCLES",
+      "samples": 8,
+      "resolution": [
+        1600,
+        1100
+      ],
+      "devices": [
+        "Apple M2 Max (GPU - 30 cores)"
+      ],
+      "blender": "5.2.0 LTS"
+    },
+    "render_seconds": 17.785326291806996,
+    "png_seconds": 0.36580387502908707,
+    "save_scene_seconds": 0.2613375410437584,
+    "script_seconds": 18.857031875057146,
+    "completed_unix": 1788919364.211294,
+    "scope": "Recipe read through editable scene and optional PNG; excludes agent authoring and Blender startup."
+  }
+}

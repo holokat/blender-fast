@@ -9,6 +9,8 @@ Use this workflow for Blender work. Preserve the user's scene, chosen tools and 
 
 ## Default combined path
 
+For scene creation, first check whether the compact recipe library fits the brief. Read [references/scene-recipes.md](references/scene-recipes.md) for the supported factories and interface. Prefer short scene specifications and tested generators over rewriting a complete builder. Extend the library for unfamiliar shapes when useful. Preserve requested objects and art direction; apply revisions by assembly ID and skip unchanged data.
+
 Start with batched direct-data edits and shared mesh/material data where suitable. For the verified Blender Lab bridge, use supported fast polling while preserving already-faster settings. For Cycles on the tested M2 Max, use Metal GPU only, MetalRT Auto, GPU OpenImageDenoise and persistent data for repeated renders in the same process. Preserve the task's renderer and quality requirements; inspect and measure the equivalent configuration on other hardware.
 
 Read [references/agent-workflow.md](references/agent-workflow.md) when implementing this path in a new task or agent integration. It contains the concrete render recipe, persistence boundaries, verification steps and links to working examples. Treat the measured profile as the starting choice rather than enabling every possible device or optimization.
@@ -50,6 +52,8 @@ For render optimization, read [references/rendering.md](references/rendering.md)
 Use preview render settings during iteration and restore or explicitly record final settings. Save the editable `.blend` plus the requested final exports. Before publishing previews, inspect image metadata: Blender can embed an absolute `.blend` path even when visible stamping is disabled. Disable filename metadata at render time when the path should not be shared. Keep temporary previews and logs in the task's work directory.
 
 ## Report timings honestly
+
+Measure recipe authoring separately from reusable library development. Executing prepared JSON quickly does not establish prompt-to-done latency. The recipe workflow offers explicit Eevee and low-sample Cycles preview profiles; report their resolution and quality tradeoffs, and preserve final-output requirements.
 
 Separate model/tool orchestration, bridge waiting, scene setup, geometry construction, validation, saving and rendering. For a performance comparison, hold the scene, builder and output checks constant. Record batch size, call count, Blender/add-on versions, machine and sample count.
 

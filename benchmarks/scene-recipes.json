@@ -1,0 +1,1653 @@
+{
+  "scope": "Ten warm semantic revisions per lane across two persistent processes, five edits per process. Each image newly rendered. Median apply-through-PNG excludes authoring, startup, initial render, geometry equivalence checks and blend saving. Processes run sequentially in seeded shuffled order. OS/driver caches, thermal conditions and unrelated system activity were not controlled.",
+  "geometry_validation": {
+    "objects": 6885,
+    "max_transform_abs_error": 9.5367431640625e-07,
+    "same_object_ids_types_face_vertex_counts_material_colors_light_energies": true,
+    "unchanged_initial_geometry_fingerprint": true
+  },
+  "lanes": [
+    {
+      "id": "flat-opt1",
+      "label": "opt1 \u00b7 Cycles 64",
+      "count": 10,
+      "median_seconds": 7.201580874971114,
+      "min_seconds": 6.87593699991703,
+      "max_seconds": 8.638971207896248,
+      "apply_seconds": 0.04449835396371782,
+      "render_seconds": 7.002150874352083,
+      "png_seconds": 0.15805447951424867,
+      "first_in_process_seconds": [
+        7.903667124919593,
+        7.8876384580507874
+      ],
+      "speedup_opt1": 1.0,
+      "speedup_optNEW": 0.2881658837162766
+    },
+    {
+      "id": "flat-optNEW",
+      "label": "optNEW \u00b7 Cycles 8",
+      "count": 10,
+      "median_seconds": 2.0752499169902876,
+      "min_seconds": 1.8272548748645931,
+      "max_seconds": 2.4751414582133293,
+      "apply_seconds": 0.06038389552850276,
+      "render_seconds": 1.8291159374639392,
+      "png_seconds": 0.1609358754940331,
+      "first_in_process_seconds": [
+        2.6697301249951124,
+        4.214566332986578
+      ],
+      "speedup_opt1": 3.470223425145579,
+      "speedup_optNEW": 1.0
+    },
+    {
+      "id": "recipe-optNEW",
+      "label": "Recipe \u00b7 Cycles 8",
+      "count": 10,
+      "median_seconds": 1.891988208051771,
+      "min_seconds": 1.6907794999424368,
+      "max_seconds": 2.015807333169505,
+      "apply_seconds": 0.05104597960598767,
+      "render_seconds": 1.6738154374761507,
+      "png_seconds": 0.10306818748358637,
+      "first_in_process_seconds": [
+        4.273092583054677,
+        5.00494825001806
+      ],
+      "speedup_opt1": 3.8063561095799683,
+      "speedup_optNEW": 1.09686197205596
+    },
+    {
+      "id": "recipe-eevee",
+      "label": "Recipe \u00b7 Eevee full size",
+      "count": 10,
+      "median_seconds": 1.4714487498858944,
+      "min_seconds": 1.3809370419476181,
+      "max_seconds": 1.5219900419469923,
+      "apply_seconds": 0.03574389556888491,
+      "render_seconds": 1.3358909584349021,
+      "png_seconds": 0.09716622903943062,
+      "first_in_process_seconds": [
+        1.7387669580057263,
+        1.7130507922265679
+      ],
+      "speedup_opt1": 4.894211147707027,
+      "speedup_optNEW": 1.410344680473048
+    },
+    {
+      "id": "recipe-interactive",
+      "label": "Recipe \u00b7 Eevee fast preview",
+      "count": 10,
+      "median_seconds": 0.6082194584887475,
+      "min_seconds": 0.5285295001231134,
+      "max_seconds": 0.6939896671101451,
+      "apply_seconds": 0.042297937674447894,
+      "render_seconds": 0.529666104586795,
+      "png_seconds": 0.03661629150155932,
+      "first_in_process_seconds": [
+        0.8177622079383582,
+        1.1580435000360012
+      ],
+      "speedup_opt1": 11.840431565384304,
+      "speedup_optNEW": 3.4120084256210643
+    }
+  ],
+  "runs": [
+    {
+      "run": "r0-flat-opt1",
+      "profile": "opt1",
+      "mode": "flat",
+      "recipe_sha256": "0cba362500792da32a896d045a040f6f5b1a37560bb93c80a51d6e23356db17c",
+      "before_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "after_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "settings": {
+        "profile": "opt1",
+        "engine": "CYCLES",
+        "samples": 64,
+        "resolution": [
+          1600,
+          1100
+        ],
+        "devices": [
+          "Apple M2 Max (GPU - 30 cores)"
+        ],
+        "blender": "5.2.0 LTS"
+      },
+      "scope": "Apply already-authored revision, render and PNG in persistent process. No cached result images. Initial render reported separately. Authoring, startup and reading blend excluded.",
+      "runs": [
+        {
+          "label": "first",
+          "render_seconds": 7.716005540918559,
+          "through_render_seconds": 7.7160144578665495,
+          "png_seconds": 0.18764975015074015,
+          "through_png_seconds": 7.903667124919593,
+          "completed_unix": 1788920425.4169002,
+          "fingerprint": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c"
+        },
+        {
+          "label": "edit-00",
+          "apply_seconds": 0.04497833293862641,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 7.144208040786907,
+          "through_render_seconds": 7.189202457899228,
+          "png_seconds": 0.21488404204137623,
+          "through_png_seconds": 7.404089374933392,
+          "completed_unix": 1788920432.981627,
+          "fingerprint": "32c3a89f1bae9d31696f11b73389a29b1aa4dd68da5addc5a71c8f7d0caa74d9"
+        },
+        {
+          "label": "edit-01",
+          "apply_seconds": 0.11205729097127914,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 7.588482166873291,
+          "through_render_seconds": 7.700552458874881,
+          "png_seconds": 0.4236081251874566,
+          "through_png_seconds": 8.12418149993755,
+          "completed_unix": 1788920441.42754,
+          "fingerprint": "8548d0dcddc049f991bce7f27bf0abf8e8096bbfcadb7218d763943247073e0c"
+        },
+        {
+          "label": "edit-02",
+          "apply_seconds": 0.3043115418404341,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 8.077237708028406,
+          "through_render_seconds": 8.3815602499526,
+          "png_seconds": 0.25740470783784986,
+          "through_png_seconds": 8.638971207896248,
+          "completed_unix": 1788920451.116747,
+          "fingerprint": "7ba5302359debb53e45ed8145e37292e18eed715cadce0560889c8fb603c421b"
+        },
+        {
+          "label": "edit-03",
+          "apply_seconds": 0.04935433389618993,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 7.924530083080754,
+          "through_render_seconds": 7.973900082986802,
+          "png_seconds": 0.26258504088036716,
+          "through_png_seconds": 8.236489790957421,
+          "completed_unix": 1788920459.770166,
+          "fingerprint": "65701b85a687396600a7f49eef590127c9e4b6541705aeeb1e48af674f2a608d"
+        },
+        {
+          "label": "edit-04",
+          "apply_seconds": 0.3768558748997748,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 7.823026833124459,
+          "through_render_seconds": 8.199908290989697,
+          "png_seconds": 0.27269208314828575,
+          "through_png_seconds": 8.47260404098779,
+          "completed_unix": 1788920469.4695601,
+          "fingerprint": "b3daca5b0ccf9426fecd36d461880c12af444023736c761de9766fc74169ee69"
+        }
+      ],
+      "save_scene_seconds": 1.3978462498635054,
+      "final_scene_inventory": {
+        "objects": 6906,
+        "faces": 260854
+      }
+    },
+    {
+      "run": "r0-flat-optNEW",
+      "profile": "optNEW",
+      "mode": "flat",
+      "recipe_sha256": "0cba362500792da32a896d045a040f6f5b1a37560bb93c80a51d6e23356db17c",
+      "before_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "after_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "settings": {
+        "profile": "optNEW",
+        "engine": "CYCLES",
+        "samples": 8,
+        "resolution": [
+          1600,
+          1100
+        ],
+        "devices": [
+          "Apple M2 Max (GPU - 30 cores)"
+        ],
+        "blender": "5.2.0 LTS"
+      },
+      "scope": "Apply already-authored revision, render and PNG in persistent process. No cached result images. Initial render reported separately. Authoring, startup and reading blend excluded.",
+      "runs": [
+        {
+          "label": "first",
+          "render_seconds": 2.495796832954511,
+          "through_render_seconds": 2.495799500029534,
+          "png_seconds": 0.17392808315344155,
+          "through_png_seconds": 2.6697301249951124,
+          "completed_unix": 1788920588.9455202,
+          "fingerprint": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c"
+        },
+        {
+          "label": "edit-00",
+          "apply_seconds": 0.04335729102604091,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 2.005909458035603,
+          "through_render_seconds": 2.049280666047707,
+          "png_seconds": 0.4258580419700593,
+          "through_png_seconds": 2.4751414582133293,
+          "completed_unix": 1788920591.586344,
+          "fingerprint": "32c3a89f1bae9d31696f11b73389a29b1aa4dd68da5addc5a71c8f7d0caa74d9"
+        },
+        {
+          "label": "edit-01",
+          "apply_seconds": 0.09646562486886978,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 1.7937447500880808,
+          "through_render_seconds": 1.8902273341082036,
+          "png_seconds": 0.22052900004200637,
+          "through_png_seconds": 2.11076083406806,
+          "completed_unix": 1788920594.0076811,
+          "fingerprint": "8548d0dcddc049f991bce7f27bf0abf8e8096bbfcadb7218d763943247073e0c"
+        },
+        {
+          "label": "edit-02",
+          "apply_seconds": 0.1140912079717964,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 1.9521692090202123,
+          "through_render_seconds": 2.0662733751814812,
+          "png_seconds": 0.2131315830629319,
+          "through_png_seconds": 2.2794090840034187,
+          "completed_unix": 1788920596.766633,
+          "fingerprint": "7ba5302359debb53e45ed8145e37292e18eed715cadce0560889c8fb603c421b"
+        },
+        {
+          "label": "edit-03",
+          "apply_seconds": 0.11318687512539327,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 1.8298478750512004,
+          "through_render_seconds": 1.9430512918625027,
+          "png_seconds": 0.13229729188606143,
+          "through_png_seconds": 2.075351333944127,
+          "completed_unix": 1788920599.12885,
+          "fingerprint": "65701b85a687396600a7f49eef590127c9e4b6541705aeeb1e48af674f2a608d"
+        },
+        {
+          "label": "edit-04",
+          "apply_seconds": 0.03977812500670552,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 1.6957152909599245,
+          "through_render_seconds": 1.7355070828925818,
+          "png_seconds": 0.09174537495709956,
+          "through_png_seconds": 1.8272548748645931,
+          "completed_unix": 1788920601.120538,
+          "fingerprint": "b3daca5b0ccf9426fecd36d461880c12af444023736c761de9766fc74169ee69"
+        }
+      ],
+      "save_scene_seconds": 0.2380667079705745,
+      "final_scene_inventory": {
+        "objects": 6906,
+        "faces": 260854
+      }
+    },
+    {
+      "run": "r0-recipe-eevee",
+      "profile": "eevee",
+      "mode": "recipe",
+      "recipe_sha256": "0cba362500792da32a896d045a040f6f5b1a37560bb93c80a51d6e23356db17c",
+      "before_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "after_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "settings": {
+        "profile": "eevee",
+        "engine": "BLENDER_EEVEE",
+        "samples": 16,
+        "resolution": [
+          1600,
+          1100
+        ],
+        "devices": [
+          "Eevee GPU"
+        ],
+        "blender": "5.2.0 LTS"
+      },
+      "scope": "Apply already-authored revision, render and PNG in persistent process. No cached result images. Initial render reported separately. Authoring, startup and reading blend excluded.",
+      "runs": [
+        {
+          "label": "first",
+          "render_seconds": 1.5652245830278844,
+          "through_render_seconds": 1.5652267499826849,
+          "png_seconds": 0.1735349998343736,
+          "through_png_seconds": 1.7387669580057263,
+          "completed_unix": 1788920390.64523,
+          "fingerprint": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c"
+        },
+        {
+          "label": "edit-00",
+          "apply_seconds": 0.035550333093851805,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "f776c04ec1f3fa47e5906d488e747c313b3a4ce2b902921365a46d5a851a35aa",
+          "render_seconds": 1.2503090831451118,
+          "through_render_seconds": 1.285880124894902,
+          "png_seconds": 0.09505462506785989,
+          "through_png_seconds": 1.3809370419476181,
+          "completed_unix": 1788920392.183701,
+          "fingerprint": "f2dc677e3446f613de435494c570877d28c30de1f41ad9c6d4ad02f877efea5e"
+        },
+        {
+          "label": "edit-01",
+          "apply_seconds": 0.0349145841319114,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "da0f428cc835d3b32ecd76b06591e678b79e44bdf3be642bcd8ac22976ccc093",
+          "render_seconds": 1.3081878749653697,
+          "through_render_seconds": 1.34311837493442,
+          "png_seconds": 0.09523420804180205,
+          "through_png_seconds": 1.4383549578487873,
+          "completed_unix": 1788920393.779045,
+          "fingerprint": "8548d0dcddc049f991bce7f27bf0abf8e8096bbfcadb7218d763943247073e0c"
+        },
+        {
+          "label": "edit-02",
+          "apply_seconds": 0.035154292127117515,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "79e5b6a4f00b86adff350ae4349ddb5f88ff66a47079d506e09565c775780528",
+          "render_seconds": 1.2734508328139782,
+          "through_render_seconds": 1.3086211250629276,
+          "png_seconds": 0.09904104098677635,
+          "through_png_seconds": 1.407664499944076,
+          "completed_unix": 1788920395.347466,
+          "fingerprint": "00ad57d2ed230e999348f88ba36120e0173edba8c397d33c1ece0ab3b22ce34b"
+        },
+        {
+          "label": "edit-03",
+          "apply_seconds": 0.03515520808286965,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "8f5b4c103be2fb577878fd07b9114cd2b00af341f12bdd087ce477051b46137e",
+          "render_seconds": 1.3218373330309987,
+          "through_render_seconds": 1.3570095000322908,
+          "png_seconds": 0.09813958313316107,
+          "through_png_seconds": 1.4551512501202524,
+          "completed_unix": 1788920396.963742,
+          "fingerprint": "c70cdf67bdee32c1d69e94e8e668b17a03889704458c3af9203ea50cc2dd3198"
+        },
+        {
+          "label": "edit-04",
+          "apply_seconds": 0.03522075014188886,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "73f9247e4dd6be01b8ffc0e7df03e1525d90f1d0136076200a913f8fe3e27e5c",
+          "render_seconds": 1.3901467078831047,
+          "through_render_seconds": 1.4253837920259684,
+          "png_seconds": 0.09660358307883143,
+          "through_png_seconds": 1.5219900419469923,
+          "completed_unix": 1788920398.646435,
+          "fingerprint": "1c81cdb8532eb7297a3b4e21348d22766b1d2298432c4456eea80b9a97499611"
+        }
+      ],
+      "save_scene_seconds": 0.2191026248037815,
+      "final_scene_inventory": {
+        "objects": 6906,
+        "faces": 260854
+      }
+    },
+    {
+      "run": "r0-recipe-interactive",
+      "profile": "interactive",
+      "mode": "recipe",
+      "recipe_sha256": "0cba362500792da32a896d045a040f6f5b1a37560bb93c80a51d6e23356db17c",
+      "before_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "after_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "settings": {
+        "profile": "interactive",
+        "engine": "BLENDER_EEVEE",
+        "samples": 4,
+        "resolution": [
+          800,
+          550
+        ],
+        "devices": [
+          "Eevee GPU"
+        ],
+        "blender": "5.2.0 LTS"
+      },
+      "scope": "Apply already-authored revision, render and PNG in persistent process. No cached result images. Initial render reported separately. Authoring, startup and reading blend excluded.",
+      "runs": [
+        {
+          "label": "first",
+          "render_seconds": 0.7004797079134732,
+          "through_render_seconds": 0.7004825829062611,
+          "png_seconds": 0.11727641709148884,
+          "through_png_seconds": 0.8177622079383582,
+          "completed_unix": 1788920503.310068,
+          "fingerprint": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c"
+        },
+        {
+          "label": "edit-00",
+          "apply_seconds": 0.043479292187839746,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "f776c04ec1f3fa47e5906d488e747c313b3a4ce2b902921365a46d5a851a35aa",
+          "render_seconds": 0.6056771671865135,
+          "through_render_seconds": 0.649179375031963,
+          "png_seconds": 0.04480724991299212,
+          "through_png_seconds": 0.6939896671101451,
+          "completed_unix": 1788920504.1667871,
+          "fingerprint": "f2dc677e3446f613de435494c570877d28c30de1f41ad9c6d4ad02f877efea5e"
+        },
+        {
+          "label": "edit-01",
+          "apply_seconds": 0.04441537498496473,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "da0f428cc835d3b32ecd76b06591e678b79e44bdf3be642bcd8ac22976ccc093",
+          "render_seconds": 0.5428694591391832,
+          "through_render_seconds": 0.5873057078570127,
+          "png_seconds": 0.04060095804743469,
+          "through_png_seconds": 0.6279093329794705,
+          "completed_unix": 1788920504.9598699,
+          "fingerprint": "8548d0dcddc049f991bce7f27bf0abf8e8096bbfcadb7218d763943247073e0c"
+        },
+        {
+          "label": "edit-02",
+          "apply_seconds": 0.04392770794220269,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "79e5b6a4f00b86adff350ae4349ddb5f88ff66a47079d506e09565c775780528",
+          "render_seconds": 0.5449373328592628,
+          "through_render_seconds": 0.5888843340799212,
+          "png_seconds": 0.028214375022798777,
+          "through_png_seconds": 0.6171007920056581,
+          "completed_unix": 1788920505.7410948,
+          "fingerprint": "00ad57d2ed230e999348f88ba36120e0173edba8c397d33c1ece0ab3b22ce34b"
+        },
+        {
+          "label": "edit-03",
+          "apply_seconds": 0.04491741699166596,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "8f5b4c103be2fb577878fd07b9114cd2b00af341f12bdd087ce477051b46137e",
+          "render_seconds": 0.5452252079267055,
+          "through_render_seconds": 0.5901609999127686,
+          "png_seconds": 0.0450228750705719,
+          "through_png_seconds": 0.6351863748859614,
+          "completed_unix": 1788920506.541908,
+          "fingerprint": "c70cdf67bdee32c1d69e94e8e668b17a03889704458c3af9203ea50cc2dd3198"
+        },
+        {
+          "label": "edit-04",
+          "apply_seconds": 0.048043749993667006,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "73f9247e4dd6be01b8ffc0e7df03e1525d90f1d0136076200a913f8fe3e27e5c",
+          "render_seconds": 0.5549514580052346,
+          "through_render_seconds": 0.6030130831059068,
+          "png_seconds": 0.03263162495568395,
+          "through_png_seconds": 0.635648125084117,
+          "completed_unix": 1788920507.3436968,
+          "fingerprint": "1c81cdb8532eb7297a3b4e21348d22766b1d2298432c4456eea80b9a97499611"
+        }
+      ],
+      "save_scene_seconds": 0.24594608298502862,
+      "final_scene_inventory": {
+        "objects": 6906,
+        "faces": 260854
+      }
+    },
+    {
+      "run": "r0-recipe-optNEW",
+      "profile": "optNEW",
+      "mode": "recipe",
+      "recipe_sha256": "0cba362500792da32a896d045a040f6f5b1a37560bb93c80a51d6e23356db17c",
+      "before_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "after_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "settings": {
+        "profile": "optNEW",
+        "engine": "CYCLES",
+        "samples": 8,
+        "resolution": [
+          1600,
+          1100
+        ],
+        "devices": [
+          "Apple M2 Max (GPU - 30 cores)"
+        ],
+        "blender": "5.2.0 LTS"
+      },
+      "scope": "Apply already-authored revision, render and PNG in persistent process. No cached result images. Initial render reported separately. Authoring, startup and reading blend excluded.",
+      "runs": [
+        {
+          "label": "first",
+          "render_seconds": 4.094923582859337,
+          "through_render_seconds": 4.094939083093777,
+          "png_seconds": 0.1781447089742869,
+          "through_png_seconds": 4.273092583054677,
+          "completed_unix": 1788920404.815402,
+          "fingerprint": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c"
+        },
+        {
+          "label": "edit-00",
+          "apply_seconds": 0.06285929190926254,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "f776c04ec1f3fa47e5906d488e747c313b3a4ce2b902921365a46d5a851a35aa",
+          "render_seconds": 1.6492182922083884,
+          "through_render_seconds": 1.7121177080553025,
+          "png_seconds": 0.16400295891799033,
+          "through_png_seconds": 1.8761384580284357,
+          "completed_unix": 1788920406.852621,
+          "fingerprint": "f2dc677e3446f613de435494c570877d28c30de1f41ad9c6d4ad02f877efea5e"
+        },
+        {
+          "label": "edit-01",
+          "apply_seconds": 0.039361667120829225,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "da0f428cc835d3b32ecd76b06591e678b79e44bdf3be642bcd8ac22976ccc093",
+          "render_seconds": 1.5572817919310182,
+          "through_render_seconds": 1.5966624170541763,
+          "png_seconds": 0.0987671660259366,
+          "through_png_seconds": 1.6954317500349134,
+          "completed_unix": 1788920408.7331781,
+          "fingerprint": "8548d0dcddc049f991bce7f27bf0abf8e8096bbfcadb7218d763943247073e0c"
+        },
+        {
+          "label": "edit-02",
+          "apply_seconds": 0.03660374996252358,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "79e5b6a4f00b86adff350ae4349ddb5f88ff66a47079d506e09565c775780528",
+          "render_seconds": 1.770022084005177,
+          "through_render_seconds": 1.806643416872248,
+          "png_seconds": 0.10119200008921325,
+          "through_png_seconds": 1.9078379580751061,
+          "completed_unix": 1788920410.802507,
+          "fingerprint": "00ad57d2ed230e999348f88ba36120e0173edba8c397d33c1ece0ab3b22ce34b"
+        },
+        {
+          "label": "edit-03",
+          "apply_seconds": 0.03833299991674721,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "8f5b4c103be2fb577878fd07b9114cd2b00af341f12bdd087ce477051b46137e",
+          "render_seconds": 1.5618768341373652,
+          "through_render_seconds": 1.600233166012913,
+          "png_seconds": 0.10266687488183379,
+          "through_png_seconds": 1.7029039580374956,
+          "completed_unix": 1788920412.6681879,
+          "fingerprint": "c70cdf67bdee32c1d69e94e8e668b17a03889704458c3af9203ea50cc2dd3198"
+        },
+        {
+          "label": "edit-04",
+          "apply_seconds": 0.03783587506040931,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "73f9247e4dd6be01b8ffc0e7df03e1525d90f1d0136076200a913f8fe3e27e5c",
+          "render_seconds": 1.5488377078436315,
+          "through_render_seconds": 1.586690166965127,
+          "png_seconds": 0.10408674995414913,
+          "through_png_seconds": 1.6907794999424368,
+          "completed_unix": 1788920414.522479,
+          "fingerprint": "1c81cdb8532eb7297a3b4e21348d22766b1d2298432c4456eea80b9a97499611"
+        }
+      ],
+      "save_scene_seconds": 0.22509124991483986,
+      "final_scene_inventory": {
+        "objects": 6906,
+        "faces": 260854
+      }
+    },
+    {
+      "run": "r1-flat-opt1",
+      "profile": "opt1",
+      "mode": "flat",
+      "recipe_sha256": "0cba362500792da32a896d045a040f6f5b1a37560bb93c80a51d6e23356db17c",
+      "before_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "after_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "settings": {
+        "profile": "opt1",
+        "engine": "CYCLES",
+        "samples": 64,
+        "resolution": [
+          1600,
+          1100
+        ],
+        "devices": [
+          "Apple M2 Max (GPU - 30 cores)"
+        ],
+        "blender": "5.2.0 LTS"
+      },
+      "scope": "Apply already-authored revision, render and PNG in persistent process. No cached result images. Initial render reported separately. Authoring, startup and reading blend excluded.",
+      "runs": [
+        {
+          "label": "first",
+          "render_seconds": 7.720009042182937,
+          "through_render_seconds": 7.720011375145987,
+          "png_seconds": 0.1676239580847323,
+          "through_png_seconds": 7.8876384580507874,
+          "completed_unix": 1788920548.729515,
+          "fingerprint": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c"
+        },
+        {
+          "label": "edit-00",
+          "apply_seconds": 0.03917725011706352,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 6.860093707917258,
+          "through_render_seconds": 6.8992875828407705,
+          "png_seconds": 0.09978237492032349,
+          "through_png_seconds": 6.999072375008836,
+          "completed_unix": 1788920555.8831968,
+          "fingerprint": "32c3a89f1bae9d31696f11b73389a29b1aa4dd68da5addc5a71c8f7d0caa74d9"
+        },
+        {
+          "label": "edit-01",
+          "apply_seconds": 0.03742579184472561,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 6.7372634168714285,
+          "through_render_seconds": 6.77469995804131,
+          "png_seconds": 0.1012249169871211,
+          "through_png_seconds": 6.87593699991703,
+          "completed_unix": 1788920562.917978,
+          "fingerprint": "8548d0dcddc049f991bce7f27bf0abf8e8096bbfcadb7218d763943247073e0c"
+        },
+        {
+          "label": "edit-02",
+          "apply_seconds": 0.042240999871864915,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 6.775030333083123,
+          "through_render_seconds": 6.817284167045727,
+          "png_seconds": 0.09885712480172515,
+          "through_png_seconds": 6.916144749848172,
+          "completed_unix": 1788920569.991669,
+          "fingerprint": "7ba5302359debb53e45ed8145e37292e18eed715cadce0560889c8fb603c421b"
+        },
+        {
+          "label": "edit-03",
+          "apply_seconds": 0.04047558410093188,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 6.8382836249656975,
+          "through_render_seconds": 6.878788916859776,
+          "png_seconds": 0.09734179102815688,
+          "through_png_seconds": 6.976133459014818,
+          "completed_unix": 1788920577.129205,
+          "fingerprint": "65701b85a687396600a7f49eef590127c9e4b6541705aeeb1e48af674f2a608d"
+        },
+        {
+          "label": "edit-04",
+          "apply_seconds": 0.04401837498880923,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 6.805229250108823,
+          "through_render_seconds": 6.849270666018128,
+          "png_seconds": 0.0925660829525441,
+          "through_png_seconds": 6.941839458188042,
+          "completed_unix": 1788920584.2341278,
+          "fingerprint": "b3daca5b0ccf9426fecd36d461880c12af444023736c761de9766fc74169ee69"
+        }
+      ],
+      "save_scene_seconds": 0.22005429188720882,
+      "final_scene_inventory": {
+        "objects": 6906,
+        "faces": 260854
+      }
+    },
+    {
+      "run": "r1-flat-optNEW",
+      "profile": "optNEW",
+      "mode": "flat",
+      "recipe_sha256": "0cba362500792da32a896d045a040f6f5b1a37560bb93c80a51d6e23356db17c",
+      "before_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "after_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "settings": {
+        "profile": "optNEW",
+        "engine": "CYCLES",
+        "samples": 8,
+        "resolution": [
+          1600,
+          1100
+        ],
+        "devices": [
+          "Apple M2 Max (GPU - 30 cores)"
+        ],
+        "blender": "5.2.0 LTS"
+      },
+      "scope": "Apply already-authored revision, render and PNG in persistent process. No cached result images. Initial render reported separately. Authoring, startup and reading blend excluded.",
+      "runs": [
+        {
+          "label": "first",
+          "render_seconds": 3.8698664580006152,
+          "through_render_seconds": 3.8698709160089493,
+          "png_seconds": 0.34469191590324044,
+          "through_png_seconds": 4.214566332986578,
+          "completed_unix": 1788920515.042897,
+          "fingerprint": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c"
+        },
+        {
+          "label": "edit-00",
+          "apply_seconds": 0.07279833289794624,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 1.7853738749399781,
+          "through_render_seconds": 1.8581893329974264,
+          "png_seconds": 0.1359686660580337,
+          "through_png_seconds": 1.9941641250625253,
+          "completed_unix": 1788920517.3399181,
+          "fingerprint": "32c3a89f1bae9d31696f11b73389a29b1aa4dd68da5addc5a71c8f7d0caa74d9"
+        },
+        {
+          "label": "edit-01",
+          "apply_seconds": 0.047969458159059286,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 1.8600405841134489,
+          "through_render_seconds": 1.9080303339287639,
+          "png_seconds": 0.32981787505559623,
+          "through_png_seconds": 2.2378537498880178,
+          "completed_unix": 1788920519.8967822,
+          "fingerprint": "8548d0dcddc049f991bce7f27bf0abf8e8096bbfcadb7218d763943247073e0c"
+        },
+        {
+          "label": "edit-02",
+          "apply_seconds": 0.04144087480381131,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 1.8485184169840068,
+          "through_render_seconds": 1.8899791250005364,
+          "png_seconds": 0.14853441691957414,
+          "through_png_seconds": 2.0385217908769846,
+          "completed_unix": 1788920522.235253,
+          "fingerprint": "7ba5302359debb53e45ed8145e37292e18eed715cadce0560889c8fb603c421b"
+        },
+        {
+          "label": "edit-03",
+          "apply_seconds": 0.07336979196406901,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 1.828383999876678,
+          "through_render_seconds": 1.9018019158393145,
+          "png_seconds": 0.17333733406849205,
+          "through_png_seconds": 2.0751485000364482,
+          "completed_unix": 1788920524.645302,
+          "fingerprint": "65701b85a687396600a7f49eef590127c9e4b6541705aeeb1e48af674f2a608d"
+        },
+        {
+          "label": "edit-04",
+          "apply_seconds": 0.04033970809541643,
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "rebuilt": [],
+          "render_seconds": 1.7178294588811696,
+          "through_render_seconds": 1.7581828751135617,
+          "png_seconds": 0.10059658298268914,
+          "through_png_seconds": 1.8587824581190944,
+          "completed_unix": 1788920526.8178189,
+          "fingerprint": "b3daca5b0ccf9426fecd36d461880c12af444023736c761de9766fc74169ee69"
+        }
+      ],
+      "save_scene_seconds": 0.22285204101353884,
+      "final_scene_inventory": {
+        "objects": 6906,
+        "faces": 260854
+      }
+    },
+    {
+      "run": "r1-recipe-eevee",
+      "profile": "eevee",
+      "mode": "recipe",
+      "recipe_sha256": "0cba362500792da32a896d045a040f6f5b1a37560bb93c80a51d6e23356db17c",
+      "before_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "after_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "settings": {
+        "profile": "eevee",
+        "engine": "BLENDER_EEVEE",
+        "samples": 16,
+        "resolution": [
+          1600,
+          1100
+        ],
+        "devices": [
+          "Eevee GPU"
+        ],
+        "blender": "5.2.0 LTS"
+      },
+      "scope": "Apply already-authored revision, render and PNG in persistent process. No cached result images. Initial render reported separately. Authoring, startup and reading blend excluded.",
+      "runs": [
+        {
+          "label": "first",
+          "render_seconds": 1.5357392500154674,
+          "through_render_seconds": 1.5357415832113475,
+          "png_seconds": 0.17730687512084842,
+          "through_png_seconds": 1.7130507922265679,
+          "completed_unix": 1788920530.6611981,
+          "fingerprint": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c"
+        },
+        {
+          "label": "edit-00",
+          "apply_seconds": 0.035937458043918014,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "f776c04ec1f3fa47e5906d488e747c313b3a4ce2b902921365a46d5a851a35aa",
+          "render_seconds": 1.3307035840116441,
+          "through_render_seconds": 1.3666615409310907,
+          "png_seconds": 0.10052058403380215,
+          "through_png_seconds": 1.4671847908757627,
+          "completed_unix": 1788920532.28769,
+          "fingerprint": "f2dc677e3446f613de435494c570877d28c30de1f41ad9c6d4ad02f877efea5e"
+        },
+        {
+          "label": "edit-01",
+          "apply_seconds": 0.03660304192453623,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "da0f428cc835d3b32ecd76b06591e678b79e44bdf3be642bcd8ac22976ccc093",
+          "render_seconds": 1.351376499980688,
+          "through_render_seconds": 1.3879973338916898,
+          "png_seconds": 0.09789224993437529,
+          "through_png_seconds": 1.4858920839615166,
+          "completed_unix": 1788920533.934426,
+          "fingerprint": "8548d0dcddc049f991bce7f27bf0abf8e8096bbfcadb7218d763943247073e0c"
+        },
+        {
+          "label": "edit-02",
+          "apply_seconds": 0.03714925004169345,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "79e5b6a4f00b86adff350ae4349ddb5f88ff66a47079d506e09565c775780528",
+          "render_seconds": 1.3523414998780936,
+          "through_render_seconds": 1.3895054159220308,
+          "png_seconds": 0.09706883295439184,
+          "through_png_seconds": 1.486577290808782,
+          "completed_unix": 1788920535.578442,
+          "fingerprint": "00ad57d2ed230e999348f88ba36120e0173edba8c397d33c1ece0ab3b22ce34b"
+        },
+        {
+          "label": "edit-03",
+          "apply_seconds": 0.03666741703636944,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "8f5b4c103be2fb577878fd07b9114cd2b00af341f12bdd087ce477051b46137e",
+          "render_seconds": 1.3451346659567207,
+          "through_render_seconds": 1.3818191669415683,
+          "png_seconds": 0.09565612487494946,
+          "through_png_seconds": 1.4774770829826593,
+          "completed_unix": 1788920537.215349,
+          "fingerprint": "c70cdf67bdee32c1d69e94e8e668b17a03889704458c3af9203ea50cc2dd3198"
+        },
+        {
+          "label": "edit-04",
+          "apply_seconds": 0.0373493330553174,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "73f9247e4dd6be01b8ffc0e7df03e1525d90f1d0136076200a913f8fe3e27e5c",
+          "render_seconds": 1.3410783328581601,
+          "through_render_seconds": 1.378446999937296,
+          "png_seconds": 0.0972636251244694,
+          "through_png_seconds": 1.475712708896026,
+          "completed_unix": 1788920538.8489459,
+          "fingerprint": "1c81cdb8532eb7297a3b4e21348d22766b1d2298432c4456eea80b9a97499611"
+        }
+      ],
+      "save_scene_seconds": 0.22182612493634224,
+      "final_scene_inventory": {
+        "objects": 6906,
+        "faces": 260854
+      }
+    },
+    {
+      "run": "r1-recipe-interactive",
+      "profile": "interactive",
+      "mode": "recipe",
+      "recipe_sha256": "0cba362500792da32a896d045a040f6f5b1a37560bb93c80a51d6e23356db17c",
+      "before_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "after_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "settings": {
+        "profile": "interactive",
+        "engine": "BLENDER_EEVEE",
+        "samples": 4,
+        "resolution": [
+          800,
+          550
+        ],
+        "devices": [
+          "Eevee GPU"
+        ],
+        "blender": "5.2.0 LTS"
+      },
+      "scope": "Apply already-authored revision, render and PNG in persistent process. No cached result images. Initial render reported separately. Authoring, startup and reading blend excluded.",
+      "runs": [
+        {
+          "label": "first",
+          "render_seconds": 1.0331213751342148,
+          "through_render_seconds": 1.0331241660751402,
+          "png_seconds": 0.1249170838855207,
+          "through_png_seconds": 1.1580435000360012,
+          "completed_unix": 1788920496.908693,
+          "fingerprint": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c"
+        },
+        {
+          "label": "edit-00",
+          "apply_seconds": 0.03962795902043581,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "f776c04ec1f3fa47e5906d488e747c313b3a4ce2b902921365a46d5a851a35aa",
+          "render_seconds": 0.501879540970549,
+          "through_render_seconds": 0.5415287499781698,
+          "png_seconds": 0.02768154116347432,
+          "through_png_seconds": 0.5692137498408556,
+          "completed_unix": 1788920497.647933,
+          "fingerprint": "f2dc677e3446f613de435494c570877d28c30de1f41ad9c6d4ad02f877efea5e"
+        },
+        {
+          "label": "edit-01",
+          "apply_seconds": 0.03670566598884761,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "da0f428cc835d3b32ecd76b06591e678b79e44bdf3be642bcd8ac22976ccc093",
+          "render_seconds": 0.48152158386074007,
+          "through_render_seconds": 0.518248250009492,
+          "png_seconds": 0.028881333069875836,
+          "through_png_seconds": 0.5471304999664426,
+          "completed_unix": 1788920498.3500469,
+          "fingerprint": "8548d0dcddc049f991bce7f27bf0abf8e8096bbfcadb7218d763943247073e0c"
+        },
+        {
+          "label": "edit-02",
+          "apply_seconds": 0.0338234999217093,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "79e5b6a4f00b86adff350ae4349ddb5f88ff66a47079d506e09565c775780528",
+          "render_seconds": 0.465519999852404,
+          "through_render_seconds": 0.4993589580990374,
+          "png_seconds": 0.029168166918680072,
+          "through_png_seconds": 0.5285295001231134,
+          "completed_unix": 1788920499.0354502,
+          "fingerprint": "00ad57d2ed230e999348f88ba36120e0173edba8c397d33c1ece0ab3b22ce34b"
+        },
+        {
+          "label": "edit-03",
+          "apply_seconds": 0.04094374994747341,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "8f5b4c103be2fb577878fd07b9114cd2b00af341f12bdd087ce477051b46137e",
+          "render_seconds": 0.5164627500344068,
+          "through_render_seconds": 0.5574383330531418,
+          "png_seconds": 0.04189712484367192,
+          "through_png_seconds": 0.5993381249718368,
+          "completed_unix": 1788920499.800569,
+          "fingerprint": "c70cdf67bdee32c1d69e94e8e668b17a03889704458c3af9203ea50cc2dd3198"
+        },
+        {
+          "label": "edit-04",
+          "apply_seconds": 0.04111658316105604,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "73f9247e4dd6be01b8ffc0e7df03e1525d90f1d0136076200a913f8fe3e27e5c",
+          "render_seconds": 0.5071552922017872,
+          "through_render_seconds": 0.5482928340788931,
+          "png_seconds": 0.04376233392395079,
+          "through_png_seconds": 0.5920577920041978,
+          "completed_unix": 1788920500.5577118,
+          "fingerprint": "1c81cdb8532eb7297a3b4e21348d22766b1d2298432c4456eea80b9a97499611"
+        }
+      ],
+      "save_scene_seconds": 0.24617674993351102,
+      "final_scene_inventory": {
+        "objects": 6906,
+        "faces": 260854
+      }
+    },
+    {
+      "run": "r1-recipe-optNEW",
+      "profile": "optNEW",
+      "mode": "recipe",
+      "recipe_sha256": "0cba362500792da32a896d045a040f6f5b1a37560bb93c80a51d6e23356db17c",
+      "before_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "after_flatten": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c",
+      "settings": {
+        "profile": "optNEW",
+        "engine": "CYCLES",
+        "samples": 8,
+        "resolution": [
+          1600,
+          1100
+        ],
+        "devices": [
+          "Apple M2 Max (GPU - 30 cores)"
+        ],
+        "blender": "5.2.0 LTS"
+      },
+      "scope": "Apply already-authored revision, render and PNG in persistent process. No cached result images. Initial render reported separately. Authoring, startup and reading blend excluded.",
+      "runs": [
+        {
+          "label": "first",
+          "render_seconds": 4.7175100420136005,
+          "through_render_seconds": 4.717512582894415,
+          "png_seconds": 0.2874257080256939,
+          "through_png_seconds": 5.00494825001806,
+          "completed_unix": 1788920482.5694962,
+          "fingerprint": "e49d34f5ddf5a999c2da8f670e28d669f672ce8c7e5cf2c514c456ba5098d38c"
+        },
+        {
+          "label": "edit-00",
+          "apply_seconds": 0.06273029209114611,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "f776c04ec1f3fa47e5906d488e747c313b3a4ce2b902921365a46d5a851a35aa",
+          "render_seconds": 1.6845260839909315,
+          "through_render_seconds": 1.747278125025332,
+          "png_seconds": 0.2587247919291258,
+          "through_png_seconds": 2.0060050419997424,
+          "completed_unix": 1788920484.873238,
+          "fingerprint": "f2dc677e3446f613de435494c570877d28c30de1f41ad9c6d4ad02f877efea5e"
+        },
+        {
+          "label": "edit-01",
+          "apply_seconds": 0.06722195795737207,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "da0f428cc835d3b32ecd76b06591e678b79e44bdf3be642bcd8ac22976ccc093",
+          "render_seconds": 1.7930898328777403,
+          "through_render_seconds": 1.8603435000404716,
+          "png_seconds": 0.09401133307255805,
+          "through_png_seconds": 1.9543573749251664,
+          "completed_unix": 1788920487.068872,
+          "fingerprint": "8548d0dcddc049f991bce7f27bf0abf8e8096bbfcadb7218d763943247073e0c"
+        },
+        {
+          "label": "edit-02",
+          "apply_seconds": 0.07798983296379447,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "79e5b6a4f00b86adff350ae4349ddb5f88ff66a47079d506e09565c775780528",
+          "render_seconds": 1.6770615000277758,
+          "through_render_seconds": 1.755070084007457,
+          "png_seconds": 0.10346950008533895,
+          "through_png_seconds": 1.8585422500036657,
+          "completed_unix": 1788920489.107224,
+          "fingerprint": "00ad57d2ed230e999348f88ba36120e0173edba8c397d33c1ece0ab3b22ce34b"
+        },
+        {
+          "label": "edit-03",
+          "apply_seconds": 0.035249290987849236,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "8f5b4c103be2fb577878fd07b9114cd2b00af341f12bdd087ce477051b46137e",
+          "render_seconds": 1.6705693749245256,
+          "through_render_seconds": 1.7058619998861104,
+          "png_seconds": 0.21304424991831183,
+          "through_png_seconds": 1.9189108749851584,
+          "completed_unix": 1788920491.184406,
+          "fingerprint": "c70cdf67bdee32c1d69e94e8e668b17a03889704458c3af9203ea50cc2dd3198"
+        },
+        {
+          "label": "edit-04",
+          "apply_seconds": 0.08807416702620685,
+          "rebuilt": [],
+          "transformed": [
+            "orrery",
+            "throne",
+            "ritual",
+            "alchemy",
+            "hoist",
+            "reactor",
+            "treasury",
+            "desk",
+            "telescope"
+          ],
+          "removed": [],
+          "recipe_sha256": "73f9247e4dd6be01b8ffc0e7df03e1525d90f1d0136076200a913f8fe3e27e5c",
+          "render_seconds": 1.8311993330717087,
+          "through_render_seconds": 1.919300250010565,
+          "png_seconds": 0.09650449990294874,
+          "through_png_seconds": 2.015807333169505,
+          "completed_unix": 1788920493.451654,
+          "fingerprint": "1c81cdb8532eb7297a3b4e21348d22766b1d2298432c4456eea80b9a97499611"
+        }
+      ],
+      "save_scene_seconds": 0.21868366585113108,
+      "final_scene_inventory": {
+        "objects": 6906,
+        "faces": 260854
+      }
+    }
+  ],
+  "source_sha256": {
+    "skills/blender-fast/scripts/scene_recipe/compiler.py": "5884e7634b831a72442449df2689e057af1172c05c9f541e749b8b427961c474",
+    "skills/blender-fast/scripts/scene_recipe/__init__.py": "ddcbf82e74a296761a27fd2f9a4a88ba6894fa93bfca82280806b6bafae66889",
+    "skills/blender-fast/scripts/scene_recipe/staging.py": "5c2904c9c8e2c9bea54170feb6a83d26cb2d2269c3097ea2d36c0df9f2041024",
+    "skills/blender-fast/scripts/scene_recipe/schema.py": "0708bba35dd9bd97d3e3eea051305503bf7a7a9d7583897d01044abf4f8a32e1",
+    "skills/blender-fast/scripts/scene_recipe/factories/relics.py": "a963b3704501e7ec2263fcd35df95b20a1cdd8b50c4e675472dc6e77a1d3d99f",
+    "skills/blender-fast/scripts/scene_recipe/factories/workshops.py": "dec515d925e60efd89495a50fdec34276c1a6fb2c9c4b1e516c4ec69d560a846",
+    "skills/blender-fast/scripts/scene_recipe/factories/__init__.py": "b3f7ce84930ab0f3916955cf1c88dd7a3fbe27fb432d48b38b9b55ec0017973f",
+    "skills/blender-fast/scripts/scene_recipe/factories/celestial.py": "e0580756c17f75910faecf138aaaf9b086279ed6c6b970d2c5752cf46f92a631",
+    "skills/blender-fast/scripts/scene_recipe/factories/geometry.py": "dd5fa7aa5b5f5a8d4487062ea739b103f0515f4d15c084f6e06b7e023b4eddcd",
+    "skills/blender-fast/scripts/scene_recipe/factories/architecture.py": "2250d8582d4c850b7fd2428f07164a06b05cd0e3f60753d6697a99e87730eddd",
+    "examples/scene-recipes/run_benchmark.py": "b5ad1c66d43c6e2d27720ed09611e0f4eeea5cf7a79995bd7c5e9da594802400",
+    "examples/scene-recipes/summarize.py": "16872f818b2d74ddeeadf74b16c53f5acc5d54a57ed8cdcb64ca37eeef67c7c1",
+    "examples/scene-recipes/benchmark_worker.py": "e3ecea6a9c3b7b91255f3fe24ac3da45f1c592633a635c56064c4f66c34dfbde"
+  }
+}

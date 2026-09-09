@@ -4,6 +4,8 @@ Use this guide when applying the selected pipeline to a new Blender task. It is 
 
 ## Selected path
 
+For new scenes, first check the [compact recipe workflow](scene-recipes.md). When its generators fit the brief, author composition and parameters as a recipe and reuse the compiler. Use stable assembly IDs for revisions. Extend unsupported shapes explicitly and track library-development time separately from each request.
+
 Use coherent batches with direct `bpy.data` operations and shared mesh/material data where appropriate. For the verified local Blender Lab bridge, use supported fast polling while preserving faster existing values. For Cycles on the tested M2 Max, select **Metal GPU only, MetalRT Auto, GPU OpenImageDenoise, and persistent data for repeated renders**. Keep the requested quality settings and inspect the resulting image.
 
 This is the best combined path measured here, not a claim that every scene or computer has the same optimum. Both the house and jet used this path successfully. CPU plus GPU and forced MetalRT were slower in the house device comparison. On other hardware, identify the available backend and denoiser support, then measure the corresponding configuration.
